@@ -233,7 +233,7 @@
 <text x="-3.175" y="-1.905" size="0.889" layer="25" font="vector" ratio="11" rot="R90">&gt;name</text>
 <rectangle x1="-2.54" y1="-7.62" x2="2.54" y2="7.62" layer="39"/>
 </package>
-<package name="H8-2.54">
+<package name="H8-2.54-90D-FEMALE">
 <wire x1="-1.27" y1="10.16" x2="1.27" y2="10.16" width="0.127" layer="21"/>
 <wire x1="1.27" y1="10.16" x2="1.27" y2="-10.16" width="0.127" layer="21"/>
 <wire x1="1.27" y1="-10.16" x2="-1.27" y2="-10.16" width="0.127" layer="21"/>
@@ -246,12 +246,18 @@
 <pad name="6" x="0" y="-3.81" drill="0.889" diameter="1.651"/>
 <pad name="7" x="0" y="-6.35" drill="0.889" diameter="1.651"/>
 <pad name="8" x="0" y="-8.89" drill="0.889" diameter="1.651"/>
-<text x="-1.905" y="-1.27" size="0.889" layer="25" ratio="11" rot="R90">&gt;name</text>
-<text x="2.54" y="-1.27" size="0.889" layer="27" ratio="11" rot="R90">&gt;value</text>
-<text x="0" y="-0.635" size="0.3048" layer="33" ratio="10" rot="R90">&gt;name</text>
+<text x="-1.27" y="10.795" size="0.889" layer="25" ratio="11">&gt;name</text>
+<text x="3.81" y="10.795" size="0.889" layer="27" ratio="11">&gt;value</text>
+<text x="0.254" y="-2.032" size="0.8128" layer="33" ratio="10" rot="R90">&gt;name</text>
 <rectangle x1="-1.27" y1="-10.16" x2="1.27" y2="10.16" layer="39"/>
+<wire x1="10.12" y1="0" x2="10.12" y2="10.535" width="0.127" layer="49"/>
+<wire x1="10.12" y1="10.535" x2="1.27" y2="10.535" width="0.127" layer="49"/>
+<wire x1="1.27" y1="10.535" x2="1.27" y2="0" width="0.127" layer="49"/>
+<wire x1="10.118" y1="-10.537" x2="10.118" y2="-0.002" width="0.127" layer="49"/>
+<wire x1="1.268" y1="-0.002" x2="1.268" y2="-10.537" width="0.127" layer="49"/>
+<wire x1="10.118" y1="-10.537" x2="1.268" y2="-10.537" width="0.127" layer="49"/>
 </package>
-<package name="H3-2.54">
+<package name="H3-2.54-90D-FEMALE">
 <wire x1="-1.27" y1="3.81" x2="1.27" y2="3.81" width="0.127" layer="21"/>
 <wire x1="1.27" y1="3.81" x2="1.27" y2="-3.81" width="0.127" layer="21"/>
 <wire x1="1.27" y1="-3.81" x2="-1.27" y2="-3.81" width="0.127" layer="21"/>
@@ -266,6 +272,12 @@
 <text x="-1.905" y="-1.905" size="0.889" layer="25" ratio="11" rot="R90">&gt;NAME</text>
 <text x="2.54" y="-1.905" size="0.889" layer="27" ratio="11" rot="R90">&gt;VALUE</text>
 <rectangle x1="-1.27" y1="-3.81" x2="1.27" y2="3.81" layer="39"/>
+<wire x1="10.12" y1="0" x2="10.12" y2="4.17" width="0.127" layer="49"/>
+<wire x1="10.12" y1="4.17" x2="1.27" y2="4.17" width="0.127" layer="49"/>
+<wire x1="1.27" y1="4.17" x2="1.27" y2="0" width="0.127" layer="49"/>
+<wire x1="1.271" y1="-4.171" x2="10.121" y2="-4.171" width="0.127" layer="49"/>
+<wire x1="10.121" y1="-4.171" x2="10.121" y2="-0.001" width="0.127" layer="49"/>
+<wire x1="1.271" y1="-0.001" x2="1.271" y2="-4.171" width="0.127" layer="49"/>
 </package>
 </packages>
 <symbols>
@@ -438,13 +450,13 @@
 </device>
 </devices>
 </deviceset>
-<deviceset name="DIP-BLACK-MALE-HEADER-VERT(8P-2.54)">
-<description>320020080</description>
+<deviceset name="DIP-BLACK-FEMALE-HEADER-R/A(8P-2.54-90D)" prefix="J" uservalue="yes">
+<description>320030076</description>
 <gates>
 <gate name="G$1" symbol="HEADER-8P" x="0" y="0"/>
 </gates>
 <devices>
-<device name="" package="H8-2.54">
+<device name="" package="H8-2.54-90D-FEMALE">
 <connects>
 <connect gate="G$1" pin="1" pad="1"/>
 <connect gate="G$1" pin="2" pad="2"/>
@@ -457,20 +469,19 @@
 </connects>
 <technologies>
 <technology name="">
-<attribute name="MPN" value="P125-1108A1BS116A1" constant="no"/>
-<attribute name="VALUE" value="8p-2.54" constant="no"/>
+<attribute name="VALUE" value="8p-2.54-90d" constant="no"/>
 </technology>
 </technologies>
 </device>
 </devices>
 </deviceset>
-<deviceset name="DIP-BLACK-FEMALE-HEADER-VERT(3P-2.54)" prefix="J" uservalue="yes">
-<description>320030024</description>
+<deviceset name="DIP-BLACK-FEMALE-HEADER(3P-2.54-90D)" prefix="J" uservalue="yes">
+<description>320030100</description>
 <gates>
 <gate name="G$1" symbol="HEADER-3P" x="0" y="0"/>
 </gates>
 <devices>
-<device name="" package="H3-2.54">
+<device name="" package="H3-2.54-90D-FEMALE">
 <connects>
 <connect gate="G$1" pin="P$1" pad="1"/>
 <connect gate="G$1" pin="P$2" pad="2"/>
@@ -478,8 +489,7 @@
 </connects>
 <technologies>
 <technology name="">
-<attribute name="MPN" value="F185-1103A0BSYA1" constant="no"/>
-<attribute name="VALUE" value="3p-2.54" constant="no"/>
+<attribute name="VALUE" value="3P-2.54-90D"/>
 </technology>
 </technologies>
 </device>
@@ -1235,7 +1245,7 @@ This is the through-hole version of this chip.</description>
 <text x="-2.54" y="5.08" size="0.889" layer="21" ratio="11">&gt;NAME</text>
 <text x="-2.54" y="-5.969" size="0.889" layer="27" ratio="11">&gt;VALUE</text>
 <rectangle x1="-2.159" y1="-4.1402" x2="2.159" y2="4.1402" layer="39"/>
-<rectangle x1="2.159" y1="-0.889" x2="3.683" y2="0.889" layer="21"/>
+<rectangle x1="2.159" y1="-0.889" x2="2.54" y2="0.889" layer="21"/>
 </package>
 <package name="SW2-3.4X6.0X3.55MM-90D">
 <wire x1="3.81" y1="1.27" x2="3.81" y2="-2.286" width="0.127" layer="21"/>
@@ -1899,10 +1909,10 @@ MMBT5088LT1G - TRANS-11160 (SOT-23, 50 mA 30V)&lt;br&gt;
 <part name="P+4" library="supply1" deviceset="VCC" device=""/>
 <part name="R3" library="Seeed-OPL-Resistor" deviceset="DIP-RES-4.7K-5%-1/4W(PR-D2.3XL6.5MM)" device="" value="4.7K"/>
 <part name="P+5" library="supply1" deviceset="VCC" device=""/>
-<part name="U$1" library="Seeed-OPL-Connector" deviceset="DIP-BLACK-MALE-HEADER-VERT(8P-2.54)" device="" value="8p-2.54"/>
-<part name="U$2" library="Seeed-OPL-Connector" deviceset="DIP-BLACK-MALE-HEADER-VERT(8P-2.54)" device="" value="8p-2.54"/>
+<part name="U$1" library="Seeed-OPL-Connector" deviceset="DIP-BLACK-FEMALE-HEADER-R/A(8P-2.54-90D)" device="" value="8p-2.54-90d"/>
+<part name="U$2" library="Seeed-OPL-Connector" deviceset="DIP-BLACK-FEMALE-HEADER-R/A(8P-2.54-90D)" device="" value="8p-2.54-90d"/>
 <part name="GND8" library="supply1" deviceset="GND" device=""/>
-<part name="U$3" library="Seeed-OPL-Connector" deviceset="DIP-BLACK-MALE-HEADER-VERT(8P-2.54)" device="" value="8p-2.54"/>
+<part name="U$3" library="Seeed-OPL-Connector" deviceset="DIP-BLACK-FEMALE-HEADER-R/A(8P-2.54-90D)" device="" value="8p-2.54-90d"/>
 <part name="GND10" library="supply1" deviceset="GND" device=""/>
 <part name="P+6" library="supply1" deviceset="VCC" device=""/>
 <part name="GND11" library="supply1" deviceset="GND" device=""/>
@@ -1910,7 +1920,6 @@ MMBT5088LT1G - TRANS-11160 (SOT-23, 50 mA 30V)&lt;br&gt;
 <part name="C1" library="Seeed-OPL-Capacitor" deviceset="DIP-CAP-ALUMINUM-47UF-16V(D5-H9MM)" device="" value="100µF/16V  5X7"/>
 <part name="GND5" library="supply1" deviceset="GND" device=""/>
 <part name="R1" library="Seeed-OPL-Resistor" deviceset="DIP-RES-1K-5%-1/4W(PR-D2.3XL6.5MM)" device="" value="1K"/>
-<part name="J1" library="Seeed-OPL-Connector" deviceset="DIP-BLACK-FEMALE-HEADER-VERT(3P-2.54)" device="" value="3p-2.54"/>
 <part name="GND6" library="supply1" deviceset="GND" device=""/>
 <part name="P+7" library="supply1" deviceset="VCC" device=""/>
 <part name="Y1" library="Seeed-OPL-Crystal-Oscillator" deviceset="DIP-CRYSTAL-16MHZ-18PF-30PPM-50R(HC49US)" device="" value="16MHZ"/>
@@ -1918,6 +1927,7 @@ MMBT5088LT1G - TRANS-11160 (SOT-23, 50 mA 30V)&lt;br&gt;
 <part name="C3" library="Seeed-OPL-Capacitor" deviceset="DIP-CERAMIC-DISC-22PF-50V-10%-NPO(D4.0MM)" device="" value="22pf"/>
 <part name="GND9" library="supply1" deviceset="GND" device=""/>
 <part name="Q2" library="SparkFun-DiscreteSemi" deviceset="TRANSISTOR_NPN" device="BC547"/>
+<part name="CN1" library="Seeed-OPL-Connector" deviceset="DIP-BLACK-FEMALE-HEADER(3P-2.54-90D)" device="" value="3P-2.54-90D"/>
 </parts>
 <sheets>
 <sheet>
@@ -1962,7 +1972,6 @@ rev. 0</text>
 <instance part="C1" gate="G$1" x="187.96" y="172.72"/>
 <instance part="GND5" gate="1" x="191.77" y="185.42" rot="R180"/>
 <instance part="R1" gate="G$1" x="208.28" y="177.8"/>
-<instance part="J1" gate="G$1" x="97.79" y="69.85"/>
 <instance part="GND6" gate="1" x="87.63" y="66.04" rot="R270"/>
 <instance part="P+7" gate="VCC" x="87.63" y="69.85" rot="R90"/>
 <instance part="Y1" gate="G$1" x="316.23" y="82.55" rot="R90"/>
@@ -1970,6 +1979,7 @@ rev. 0</text>
 <instance part="C3" gate="G$1" x="321.31" y="74.93"/>
 <instance part="GND9" gate="1" x="327.66" y="83.82" rot="R90"/>
 <instance part="Q2" gate="G$1" x="194.31" y="177.8" rot="R180"/>
+<instance part="CN1" gate="G$1" x="97.79" y="69.85"/>
 </instances>
 <busses>
 </busses>
@@ -2367,8 +2377,8 @@ rev. 0</text>
 <wire x1="219.71" y1="0" x2="236.22" y2="0" width="0.1524" layer="91"/>
 </segment>
 <segment>
-<pinref part="J1" gate="G$1" pin="P$2"/>
 <pinref part="P+7" gate="VCC" pin="VCC"/>
+<pinref part="CN1" gate="G$1" pin="P$2"/>
 </segment>
 </net>
 <net name="GND" class="0">
@@ -2424,10 +2434,6 @@ rev. 0</text>
 <pinref part="GND11" gate="1" pin="GND"/>
 </segment>
 <segment>
-<pinref part="J1" gate="G$1" pin="P$3"/>
-<pinref part="GND6" gate="1" pin="GND"/>
-</segment>
-<segment>
 <pinref part="C3" gate="G$1" pin="2"/>
 <pinref part="C2" gate="G$1" pin="1"/>
 <wire x1="325.12" y1="74.93" x2="325.12" y2="83.82" width="0.1524" layer="91"/>
@@ -2438,6 +2444,10 @@ rev. 0</text>
 <segment>
 <pinref part="GND5" gate="1" pin="GND"/>
 <pinref part="Q2" gate="G$1" pin="E"/>
+</segment>
+<segment>
+<pinref part="GND6" gate="1" pin="GND"/>
+<pinref part="CN1" gate="G$1" pin="P$3"/>
 </segment>
 </net>
 <net name="N$45" class="0">
@@ -2758,11 +2768,11 @@ rev. 0</text>
 </net>
 <net name="N$54" class="0">
 <segment>
-<pinref part="J1" gate="G$1" pin="P$1"/>
 <wire x1="90.17" y1="73.66" x2="88.9" y2="73.66" width="0.1524" layer="91"/>
 <wire x1="88.9" y1="73.66" x2="88.9" y2="87.63" width="0.1524" layer="91"/>
 <pinref part="M1" gate="G$1" pin="3V"/>
 <wire x1="88.9" y1="87.63" x2="96.52" y2="87.63" width="0.1524" layer="91"/>
+<pinref part="CN1" gate="G$1" pin="P$1"/>
 </segment>
 </net>
 <net name="N$55" class="0">
