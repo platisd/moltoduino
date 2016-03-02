@@ -172,7 +172,7 @@
 <text x="53.975" y="11.43" size="1.578" layer="21" font="vector">A4</text>
 <text x="55.6430125" y="8.41146875" size="0.9398" layer="21" font="vector" rot="R30">A5</text>
 <text x="55.7700125" y="5.99846875" size="0.9398" layer="21" font="vector" rot="R30">5V</text>
-<text x="56.388" y="1.905" size="1.078" layer="21" font="vector">GND</text>
+<text x="56.896" y="2.032" size="1.078" layer="21" font="vector">GND</text>
 <text x="54.864" y="51.943" size="1.27" layer="21" font="vector">Tx</text>
 <text x="54.864" y="48.387" size="1.27" layer="21" font="vector">Rx</text>
 <text x="55.626" y="45.72" size="1.578" layer="21" font="vector">2</text>
