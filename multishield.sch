@@ -6,7 +6,7 @@
 <setting alwaysvectorfont="no"/>
 <setting verticaltext="up"/>
 </settings>
-<grid distance="0.05" unitdist="inch" unit="inch" style="lines" multiple="1" display="no" altdistance="0.01" altunitdist="inch" altunit="inch"/>
+<grid distance="0.1" unitdist="inch" unit="inch" style="lines" multiple="1" display="no" altdistance="0.01" altunitdist="inch" altunit="inch"/>
 <layers>
 <layer number="1" name="Top" color="4" fill="1" visible="no" active="no"/>
 <layer number="2" name="Route2" color="1" fill="3" visible="no" active="no"/>
@@ -1535,6 +1535,26 @@ type 0207, grid 10 mm</description>
 </device>
 </devices>
 </deviceset>
+<deviceset name="DIP-CERAMIC-DISC-100NF-50V-Y5V(D5.0MM)" prefix="C" uservalue="yes">
+<description>302010208</description>
+<gates>
+<gate name="G$1" symbol="C" x="0" y="0"/>
+</gates>
+<devices>
+<device name="" package="CERAMIC-2.54">
+<connects>
+<connect gate="G$1" pin="1" pad="1"/>
+<connect gate="G$1" pin="2" pad="2"/>
+</connects>
+<technologies>
+<technology name="">
+<attribute name="MPN" value="CC1-F5SL2A101KSPW" constant="no"/>
+<attribute name="VALUE" value="100nf"/>
+</technology>
+</technologies>
+</device>
+</devices>
+</deviceset>
 </devicesets>
 </library>
 <library name="Seeed-OPL-Crystal-Oscillator">
@@ -1917,7 +1937,7 @@ MMBT5088LT1G - TRANS-11160 (SOT-23, 50 mA 30V)&lt;br&gt;
 <part name="P+6" library="supply1" deviceset="VCC" device=""/>
 <part name="GND11" library="supply1" deviceset="GND" device=""/>
 <part name="K2" library="Seeed-OPL-Button" deviceset="DIP-BUTTON-FRONT-WHITE(2P-3.4X6MM)" device="" value="TS-1101F"/>
-<part name="C1" library="Seeed-OPL-Capacitor" deviceset="DIP-CAP-ALUMINUM-47UF-16V(D5-H9MM)" device="" value="100µF/16V  5X7"/>
+<part name="C1" library="Seeed-OPL-Capacitor" deviceset="DIP-CAP-ALUMINUM-47UF-16V(D5-H9MM)" device="" value="10µF/16V"/>
 <part name="GND5" library="supply1" deviceset="GND" device=""/>
 <part name="R1" library="Seeed-OPL-Resistor" deviceset="DIP-RES-1K-5%-1/4W(PR-D2.3XL6.5MM)" device="" value="1K"/>
 <part name="GND6" library="supply1" deviceset="GND" device=""/>
@@ -1928,6 +1948,10 @@ MMBT5088LT1G - TRANS-11160 (SOT-23, 50 mA 30V)&lt;br&gt;
 <part name="GND9" library="supply1" deviceset="GND" device=""/>
 <part name="Q2" library="SparkFun-DiscreteSemi" deviceset="TRANSISTOR_NPN" device="BC547"/>
 <part name="CN1" library="Seeed-OPL-Connector" deviceset="DIP-BLACK-FEMALE-HEADER(3P-2.54-90D)" device="" value="3P-2.54-90D"/>
+<part name="C5" library="Seeed-OPL-Capacitor" deviceset="DIP-CERAMIC-DISC-100NF-50V-Y5V(D5.0MM)" device="" value="100nf"/>
+<part name="C6" library="Seeed-OPL-Capacitor" deviceset="DIP-CERAMIC-DISC-100NF-50V-Y5V(D5.0MM)" device="" value="100nf"/>
+<part name="GND12" library="supply1" deviceset="GND" device=""/>
+<part name="GND13" library="supply1" deviceset="GND" device=""/>
 </parts>
 <sheets>
 <sheet>
@@ -1980,6 +2004,10 @@ rev. 0</text>
 <instance part="GND9" gate="1" x="327.66" y="83.82" rot="R90"/>
 <instance part="Q2" gate="G$1" x="194.31" y="177.8" rot="R180"/>
 <instance part="CN1" gate="G$1" x="97.79" y="69.85"/>
+<instance part="C5" gate="G$1" x="322.58" y="66.04"/>
+<instance part="C6" gate="G$1" x="322.58" y="58.42"/>
+<instance part="GND12" gate="1" x="335.28" y="66.04" rot="R90"/>
+<instance part="GND13" gate="1" x="335.28" y="58.42" rot="R90"/>
 </instances>
 <busses>
 </busses>
@@ -2345,12 +2373,18 @@ rev. 0</text>
 <segment>
 <pinref part="U2" gate="G$1" pin="AVCC"/>
 <pinref part="P+2" gate="VCC" pin="VCC"/>
-<wire x1="304.8" y1="59.69" x2="307.34" y2="59.69" width="0.1524" layer="91"/>
 <junction x="307.34" y="59.69"/>
+<wire x1="304.8" y1="59.69" x2="307.34" y2="59.69" width="0.1524" layer="91"/>
 <wire x1="307.34" y1="59.69" x2="313.69" y2="59.69" width="0.1524" layer="91"/>
 <pinref part="U2" gate="G$1" pin="VCC"/>
 <wire x1="304.8" y1="62.23" x2="307.34" y2="62.23" width="0.1524" layer="91"/>
 <wire x1="307.34" y1="62.23" x2="307.34" y2="59.69" width="0.1524" layer="91"/>
+<pinref part="C5" gate="G$1" pin="1"/>
+<wire x1="318.77" y1="66.04" x2="304.8" y2="66.04" width="0.1524" layer="91"/>
+<wire x1="304.8" y1="66.04" x2="304.8" y2="62.23" width="0.1524" layer="91"/>
+<pinref part="C6" gate="G$1" pin="1"/>
+<wire x1="318.77" y1="58.42" x2="304.8" y2="58.42" width="0.1524" layer="91"/>
+<wire x1="304.8" y1="58.42" x2="304.8" y2="59.69" width="0.1524" layer="91"/>
 </segment>
 <segment>
 <pinref part="M1" gate="G$1" pin="5V"/>
@@ -2448,6 +2482,16 @@ rev. 0</text>
 <segment>
 <pinref part="GND6" gate="1" pin="GND"/>
 <pinref part="CN1" gate="G$1" pin="P$3"/>
+</segment>
+<segment>
+<pinref part="C5" gate="G$1" pin="2"/>
+<pinref part="GND12" gate="1" pin="GND"/>
+<wire x1="332.74" y1="66.04" x2="326.39" y2="66.04" width="0.1524" layer="91"/>
+</segment>
+<segment>
+<pinref part="C6" gate="G$1" pin="2"/>
+<pinref part="GND13" gate="1" pin="GND"/>
+<wire x1="332.74" y1="58.42" x2="326.39" y2="58.42" width="0.1524" layer="91"/>
 </segment>
 </net>
 <net name="N$45" class="0">
