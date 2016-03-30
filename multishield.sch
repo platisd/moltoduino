@@ -1438,10 +1438,10 @@ type 0207, grid 10 mm</description>
 <pad name="-" x="1" y="0" drill="0.8" diameter="1.35"/>
 <text x="-1.905" y="2.921" size="0.889" layer="25" ratio="11">&gt;NAME</text>
 <text x="-1.524" y="-4.191" size="0.635" layer="27" ratio="10">&gt;VALUE</text>
-<wire x1="-4.445" y1="0" x2="-3.81" y2="0" width="0.127" layer="21"/>
-<wire x1="-3.175" y1="0" x2="-3.81" y2="0" width="0.127" layer="21"/>
-<wire x1="-3.81" y1="0" x2="-3.81" y2="0.635" width="0.127" layer="21"/>
-<wire x1="-3.81" y1="0" x2="-3.81" y2="-0.635" width="0.127" layer="21"/>
+<wire x1="-1.397" y1="1.524" x2="-0.762" y2="1.524" width="0.127" layer="21"/>
+<wire x1="-0.127" y1="1.524" x2="-0.762" y2="1.524" width="0.127" layer="21"/>
+<wire x1="-0.762" y1="1.524" x2="-0.762" y2="2.159" width="0.127" layer="21"/>
+<wire x1="-0.762" y1="1.524" x2="-0.762" y2="0.889" width="0.127" layer="21"/>
 <wire x1="0" y1="2.5" x2="0" y2="1.651" width="0.127" layer="21"/>
 <wire x1="0" y1="1.651" x2="0" y2="1.016" width="0.127" layer="21"/>
 <wire x1="0" y1="1.016" x2="0" y2="0.381" width="0.127" layer="21"/>
@@ -1937,7 +1937,7 @@ MMBT5088LT1G - TRANS-11160 (SOT-23, 50 mA 30V)&lt;br&gt;
 <part name="P+6" library="supply1" deviceset="VCC" device=""/>
 <part name="GND11" library="supply1" deviceset="GND" device=""/>
 <part name="K2" library="Seeed-OPL-Button" deviceset="DIP-BUTTON-FRONT-WHITE(2P-3.4X6MM)" device="" value="TS-1101F"/>
-<part name="C1" library="Seeed-OPL-Capacitor" deviceset="DIP-CAP-ALUMINUM-47UF-16V(D5-H9MM)" device="" value="10µF/16V"/>
+<part name="C1" library="Seeed-OPL-Capacitor" deviceset="DIP-CAP-ALUMINUM-47UF-16V(D5-H9MM)" device="" value="10µF"/>
 <part name="GND5" library="supply1" deviceset="GND" device=""/>
 <part name="R1" library="Seeed-OPL-Resistor" deviceset="DIP-RES-1K-5%-1/4W(PR-D2.3XL6.5MM)" device="" value="1K"/>
 <part name="GND6" library="supply1" deviceset="GND" device=""/>
