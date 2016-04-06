@@ -6,7 +6,7 @@
 <setting alwaysvectorfont="no"/>
 <setting verticaltext="up"/>
 </settings>
-<grid distance="0.1" unitdist="inch" unit="inch" style="lines" multiple="1" display="no" altdistance="0.01" altunitdist="inch" altunit="inch"/>
+<grid distance="0.05" unitdist="inch" unit="inch" style="lines" multiple="1" display="no" altdistance="0.01" altunitdist="inch" altunit="inch"/>
 <layers>
 <layer number="1" name="Top" color="4" fill="1" visible="no" active="no"/>
 <layer number="2" name="Route2" color="1" fill="3" visible="no" active="no"/>
@@ -279,6 +279,100 @@
 <wire x1="10.121" y1="-4.171" x2="10.121" y2="-0.001" width="0.127" layer="49"/>
 <wire x1="1.271" y1="-0.001" x2="1.271" y2="-4.171" width="0.127" layer="49"/>
 </package>
+<package name="H7-2.54-90D-MALE">
+<wire x1="-1.27" y1="8.89" x2="1.27" y2="8.89" width="0.127" layer="21"/>
+<wire x1="1.27" y1="8.89" x2="1.27" y2="-8.89" width="0.127" layer="21"/>
+<wire x1="1.27" y1="-8.89" x2="-1.27" y2="-8.89" width="0.127" layer="21"/>
+<wire x1="-1.27" y1="-8.89" x2="-1.27" y2="8.89" width="0.127" layer="21"/>
+<wire x1="1.905" y1="7.62" x2="10.16" y2="7.62" width="0.6096" layer="21"/>
+<wire x1="1.905" y1="5.08" x2="10.16" y2="5.08" width="0.6096" layer="21"/>
+<wire x1="1.905" y1="2.54" x2="10.16" y2="2.54" width="0.6096" layer="21"/>
+<wire x1="1.905" y1="0" x2="10.16" y2="0" width="0.6096" layer="21"/>
+<wire x1="1.905" y1="-2.54" x2="10.16" y2="-2.54" width="0.6096" layer="21"/>
+<wire x1="1.905" y1="-5.08" x2="10.16" y2="-5.08" width="0.6096" layer="21"/>
+<wire x1="1.905" y1="-7.62" x2="10.16" y2="-7.62" width="0.6096" layer="21"/>
+<pad name="1" x="0" y="7.62" drill="0.889" diameter="1.651" shape="square"/>
+<pad name="2" x="0" y="5.08" drill="0.889" diameter="1.651"/>
+<pad name="3" x="0" y="2.54" drill="0.889" diameter="1.651"/>
+<pad name="4" x="0" y="0" drill="0.889" diameter="1.651"/>
+<pad name="5" x="0" y="-2.54" drill="0.889" diameter="1.651"/>
+<pad name="6" x="0" y="-5.08" drill="0.889" diameter="1.651"/>
+<pad name="7" x="0" y="-7.62" drill="0.889" diameter="1.651"/>
+<text x="-1.27" y="9.525" size="0.889" layer="25" ratio="11">&gt;name</text>
+<text x="3.81" y="9.525" size="0.889" layer="27" ratio="11">&gt;value</text>
+<text x="0.254" y="-3.302" size="0.8128" layer="33" ratio="10" rot="R90">&gt;name</text>
+<rectangle x1="-1.27" y1="-8.89" x2="1.27" y2="8.89" layer="39"/>
+<polygon width="0.127" layer="21">
+<vertex x="1.27" y="8.255"/>
+<vertex x="1.905" y="8.89"/>
+<vertex x="3.175" y="8.89"/>
+<vertex x="3.81" y="8.255"/>
+<vertex x="3.81" y="6.985"/>
+<vertex x="3.175" y="6.35"/>
+<vertex x="1.905" y="6.35"/>
+<vertex x="1.27" y="6.985"/>
+</polygon>
+<polygon width="0.127" layer="21">
+<vertex x="1.27" y="5.715"/>
+<vertex x="1.905" y="6.35"/>
+<vertex x="3.175" y="6.35"/>
+<vertex x="3.81" y="5.715"/>
+<vertex x="3.81" y="4.445"/>
+<vertex x="3.175" y="3.81"/>
+<vertex x="1.905" y="3.81"/>
+<vertex x="1.27" y="4.445"/>
+</polygon>
+<polygon width="0.127" layer="21">
+<vertex x="1.27" y="3.175"/>
+<vertex x="1.905" y="3.81"/>
+<vertex x="3.175" y="3.81"/>
+<vertex x="3.81" y="3.175"/>
+<vertex x="3.81" y="1.905"/>
+<vertex x="3.175" y="1.27"/>
+<vertex x="1.905" y="1.27"/>
+<vertex x="1.27" y="1.905"/>
+</polygon>
+<polygon width="0.127" layer="21">
+<vertex x="1.27" y="0.635"/>
+<vertex x="1.905" y="1.27"/>
+<vertex x="3.175" y="1.27"/>
+<vertex x="3.81" y="0.635"/>
+<vertex x="3.81" y="-0.635"/>
+<vertex x="3.175" y="-1.27"/>
+<vertex x="1.905" y="-1.27"/>
+<vertex x="1.27" y="-0.635"/>
+</polygon>
+<polygon width="0.127" layer="21">
+<vertex x="1.27" y="-1.905"/>
+<vertex x="1.905" y="-1.27"/>
+<vertex x="3.175" y="-1.27"/>
+<vertex x="3.81" y="-1.905"/>
+<vertex x="3.81" y="-3.175"/>
+<vertex x="3.175" y="-3.81"/>
+<vertex x="1.905" y="-3.81"/>
+<vertex x="1.27" y="-3.175"/>
+</polygon>
+<polygon width="0.127" layer="21">
+<vertex x="1.27" y="-4.445"/>
+<vertex x="1.905" y="-3.81"/>
+<vertex x="3.175" y="-3.81"/>
+<vertex x="3.81" y="-4.445"/>
+<vertex x="3.81" y="-5.715"/>
+<vertex x="3.175" y="-6.35"/>
+<vertex x="1.905" y="-6.35"/>
+<vertex x="1.27" y="-5.715"/>
+</polygon>
+<polygon width="0.127" layer="21">
+<vertex x="1.27" y="-6.985"/>
+<vertex x="1.905" y="-6.35"/>
+<vertex x="3.175" y="-6.35"/>
+<vertex x="3.81" y="-6.985"/>
+<vertex x="3.81" y="-8.255"/>
+<vertex x="3.175" y="-8.89"/>
+<vertex x="1.905" y="-8.89"/>
+<vertex x="1.27" y="-8.255"/>
+</polygon>
+</package>
 </packages>
 <symbols>
 <symbol name="HEADER-2X16P">
@@ -367,6 +461,21 @@
 <pin name="P$1" x="-7.62" y="3.81" visible="pad" length="middle" function="dotclk" swaplevel="1"/>
 <pin name="P$2" x="-7.62" y="0" visible="pad" length="middle" swaplevel="1"/>
 <pin name="P$3" x="-7.62" y="-3.81" visible="pad" length="middle" swaplevel="1"/>
+</symbol>
+<symbol name="HEADER-7P">
+<wire x1="-2.54" y1="8.89" x2="2.54" y2="8.89" width="0.254" layer="94"/>
+<wire x1="2.54" y1="8.89" x2="2.54" y2="-8.89" width="0.254" layer="94"/>
+<wire x1="2.54" y1="-8.89" x2="-2.54" y2="-8.89" width="0.254" layer="94"/>
+<wire x1="-2.54" y1="-8.89" x2="-2.54" y2="8.89" width="0.254" layer="94"/>
+<text x="-7.62" y="10.16" size="1.27" layer="95" ratio="10">&gt;name</text>
+<text x="0" y="10.16" size="1.27" layer="96" ratio="10">&gt;value</text>
+<pin name="2" x="-7.62" y="5.08" visible="pad" length="middle"/>
+<pin name="3" x="-7.62" y="2.54" visible="pad" length="middle"/>
+<pin name="4" x="-7.62" y="0" visible="pad" length="middle"/>
+<pin name="5" x="-7.62" y="-2.54" visible="pad" length="middle"/>
+<pin name="6" x="-7.62" y="-5.08" visible="pad" length="middle"/>
+<pin name="7" x="-7.62" y="-7.62" visible="pad" length="middle"/>
+<pin name="1" x="-7.62" y="7.62" visible="pad" length="middle" function="dotclk"/>
 </symbol>
 </symbols>
 <devicesets>
@@ -490,6 +599,31 @@
 <technologies>
 <technology name="">
 <attribute name="VALUE" value="3P-2.54-90D"/>
+</technology>
+</technologies>
+</device>
+</devices>
+</deviceset>
+<deviceset name="DIP-BLACK-MALE-HEADER(7P-2.54-90D)" prefix="J" uservalue="yes">
+<description>320020093</description>
+<gates>
+<gate name="G$1" symbol="HEADER-7P" x="0" y="0"/>
+</gates>
+<devices>
+<device name="" package="H7-2.54-90D-MALE">
+<connects>
+<connect gate="G$1" pin="1" pad="1"/>
+<connect gate="G$1" pin="2" pad="2"/>
+<connect gate="G$1" pin="3" pad="3"/>
+<connect gate="G$1" pin="4" pad="4"/>
+<connect gate="G$1" pin="5" pad="5"/>
+<connect gate="G$1" pin="6" pad="6"/>
+<connect gate="G$1" pin="7" pad="7"/>
+</connects>
+<technologies>
+<technology name="">
+<attribute name="MPN" value="P125-1107A0BR138A1" constant="no"/>
+<attribute name="VALUE" value="7p-2.54-90d" constant="no"/>
 </technology>
 </technologies>
 </device>
@@ -881,6 +1015,7 @@ This is the through-hole version of this chip.</description>
 <pad name="5V_ICSP" x="66.167" y="30.48" drill="1" diameter="1.778" shape="octagon"/>
 <pad name="GND@3" x="66.167" y="25.4" drill="1" diameter="1.778" shape="octagon"/>
 <pad name="RESET_ICSP" x="63.627" y="25.4" drill="1" diameter="1.778" shape="octagon"/>
+<rectangle x1="61.722" y1="29.464" x2="62.357" y2="31.496" layer="21"/>
 </package>
 <package name="ARDUINOR3_ICSP_SMT">
 <wire x1="0" y1="-0.381" x2="66.04" y2="-0.381" width="0" layer="51"/>
@@ -1952,6 +2087,10 @@ MMBT5088LT1G - TRANS-11160 (SOT-23, 50 mA 30V)&lt;br&gt;
 <part name="C6" library="Seeed-OPL-Capacitor" deviceset="DIP-CERAMIC-DISC-100NF-50V-Y5V(D5.0MM)" device="" value="100nf"/>
 <part name="GND12" library="supply1" deviceset="GND" device=""/>
 <part name="GND13" library="supply1" deviceset="GND" device=""/>
+<part name="J1" library="Seeed-OPL-Connector" deviceset="DIP-BLACK-MALE-HEADER(7P-2.54-90D)" device="" value="7p-2.54-90d"/>
+<part name="J3" library="Seeed-OPL-Connector" deviceset="DIP-BLACK-MALE-HEADER(7P-2.54-90D)" device="" value="7p-2.54-90d"/>
+<part name="J5" library="Seeed-OPL-Connector" deviceset="DIP-BLACK-MALE-HEADER(7P-2.54-90D)" device="" value="7p-2.54-90d"/>
+<part name="J6" library="Seeed-OPL-Connector" deviceset="DIP-BLACK-MALE-HEADER(7P-2.54-90D)" device="" value="7p-2.54-90d"/>
 </parts>
 <sheets>
 <sheet>
@@ -2008,6 +2147,10 @@ rev. 0</text>
 <instance part="C6" gate="G$1" x="322.58" y="58.42"/>
 <instance part="GND12" gate="1" x="335.28" y="66.04" rot="R90"/>
 <instance part="GND13" gate="1" x="335.28" y="58.42" rot="R90"/>
+<instance part="J1" gate="G$1" x="287.02" y="170.18" rot="R90"/>
+<instance part="J3" gate="G$1" x="260.35" y="5.08"/>
+<instance part="J5" gate="G$1" x="313.69" y="27.94"/>
+<instance part="J6" gate="G$1" x="316.23" y="170.18" rot="R90"/>
 </instances>
 <busses>
 </busses>
