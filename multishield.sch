@@ -6,7 +6,7 @@
 <setting alwaysvectorfont="no"/>
 <setting verticaltext="up"/>
 </settings>
-<grid distance="0.05" unitdist="inch" unit="inch" style="lines" multiple="1" display="no" altdistance="0.01" altunitdist="inch" altunit="inch"/>
+<grid distance="0.1" unitdist="inch" unit="inch" style="lines" multiple="1" display="no" altdistance="0.01" altunitdist="inch" altunit="inch"/>
 <layers>
 <layer number="1" name="Top" color="4" fill="1" visible="no" active="no"/>
 <layer number="2" name="Route2" color="1" fill="3" visible="no" active="no"/>
@@ -1266,21 +1266,29 @@ This is the through-hole version of this chip.</description>
 </package>
 <package name="SW2-3.4X6.0X3.55MM-90D">
 <wire x1="3.81" y1="1.27" x2="3.81" y2="-2.286" width="0.127" layer="21"/>
-<wire x1="3.81" y1="-2.286" x2="1.27" y2="-2.286" width="0.127" layer="21"/>
+<wire x1="3.81" y1="-2.286" x2="2.54" y2="-2.286" width="0.127" layer="21"/>
+<wire x1="2.54" y1="-2.286" x2="2.032" y2="-2.286" width="0.127" layer="21"/>
+<wire x1="2.032" y1="-2.286" x2="1.27" y2="-2.286" width="0.127" layer="21"/>
 <wire x1="1.27" y1="-2.286" x2="1.27" y2="-2.794" width="0.127" layer="21"/>
 <wire x1="1.27" y1="-2.794" x2="-1.27" y2="-2.794" width="0.127" layer="21"/>
 <wire x1="-1.27" y1="-2.794" x2="-1.27" y2="-2.286" width="0.127" layer="21"/>
-<wire x1="-1.27" y1="-2.286" x2="-3.81" y2="-2.286" width="0.127" layer="21"/>
+<wire x1="-1.27" y1="-2.286" x2="-2.032" y2="-2.286" width="0.127" layer="21"/>
+<wire x1="-2.032" y1="-2.286" x2="-2.54" y2="-2.286" width="0.127" layer="21"/>
+<wire x1="-2.54" y1="-2.286" x2="-3.81" y2="-2.286" width="0.127" layer="21"/>
 <wire x1="-3.81" y1="-2.286" x2="-3.81" y2="1.27" width="0.127" layer="21"/>
 <wire x1="-3.81" y1="1.27" x2="3.81" y2="1.27" width="0.127" layer="21"/>
-<wire x1="1.27" y1="-1.27" x2="-1.016" y2="-2.032" width="0.127" layer="21"/>
-<circle x="1.27" y="-1.27" radius="0.3592" width="0.127" layer="21"/>
-<circle x="-1.27" y="-1.27" radius="0.3592" width="0.127" layer="21"/>
-<pad name="P$1" x="2.54" y="0" drill="0.762" diameter="1.524" rot="R270"/>
-<pad name="P$2" x="-2.54" y="0" drill="0.762" diameter="1.524" rot="R270"/>
+<wire x1="1.016" y1="-1.27" x2="-1.016" y2="-2.032" width="0.127" layer="21"/>
+<circle x="1.016" y="-1.27" radius="0.3592" width="0.127" layer="21"/>
+<circle x="-1.016" y="-1.27" radius="0.3592" width="0.127" layer="21"/>
+<pad name="P$1" x="2.032" y="-0.127" drill="1.016" diameter="1.778" rot="R270"/>
+<pad name="P$2" x="-2.032" y="-0.127" drill="1.016" diameter="1.778" rot="R270"/>
 <text x="-1.905" y="1.905" size="0.889" layer="25" ratio="11">&gt;NAME</text>
 <text x="-1.905" y="-4.445" size="0.889" layer="27" ratio="11">&gt;VALUE</text>
 <rectangle x1="-1.778" y1="-4.318" x2="1.778" y2="3.302" layer="39" rot="R270"/>
+<wire x1="-2.54" y1="-1.778" x2="-2.54" y2="-2.286" width="0.127" layer="21"/>
+<wire x1="2.54" y1="-1.778" x2="2.54" y2="-2.286" width="0.127" layer="21"/>
+<wire x1="-2.032" y1="-2.286" x2="-2.032" y2="-2.032" width="0.127" layer="21"/>
+<wire x1="2.032" y1="-2.286" x2="2.032" y2="-2.032" width="0.127" layer="21"/>
 </package>
 </packages>
 <symbols>
