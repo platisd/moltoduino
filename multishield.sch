@@ -110,7 +110,13 @@
 <layer number="131" name="tAdjust" color="7" fill="1" visible="no" active="yes"/>
 <layer number="132" name="bAdjust" color="7" fill="1" visible="no" active="yes"/>
 <layer number="133" name="bottom_silk" color="7" fill="1" visible="yes" active="yes"/>
+<layer number="134" name="silk_top" color="7" fill="1" visible="no" active="no"/>
+<layer number="135" name="silk_bottom" color="7" fill="1" visible="no" active="no"/>
+<layer number="136" name="silktop" color="7" fill="1" visible="yes" active="yes"/>
+<layer number="137" name="silkbottom" color="7" fill="1" visible="yes" active="yes"/>
 <layer number="144" name="Drill_legend" color="7" fill="1" visible="no" active="yes"/>
+<layer number="145" name="DrillLegend_01-16" color="7" fill="1" visible="yes" active="yes"/>
+<layer number="146" name="DrillLegend_01-20" color="7" fill="1" visible="yes" active="yes"/>
 <layer number="150" name="Notes" color="7" fill="1" visible="no" active="yes"/>
 <layer number="151" name="HeatSink" color="7" fill="1" visible="no" active="yes"/>
 <layer number="152" name="_bDocu" color="7" fill="1" visible="no" active="yes"/>
@@ -891,13 +897,13 @@ This is the through-hole version of this chip.</description>
 <text x="17.399" y="52.07" size="1.016" layer="21" font="vector">SCL</text>
 <text x="20.193" y="52.07" size="1.016" layer="21" font="vector">SDA</text>
 <text x="29.4539" y="3.81" size="1.016" layer="21" font="vector">IOr</text>
-<pad name="MOSI" x="66.167" y="27.94" drill="1" diameter="1.778" shape="octagon"/>
-<pad name="SCK" x="63.627" y="27.94" drill="1" diameter="1.778" shape="octagon"/>
-<pad name="MISO" x="63.627" y="30.48" drill="1" diameter="1.778" shape="square"/>
-<pad name="5V_ICSP" x="66.167" y="30.48" drill="1" diameter="1.778" shape="octagon"/>
-<pad name="GND@3" x="66.167" y="25.4" drill="1" diameter="1.778" shape="octagon"/>
-<pad name="RESET_ICSP" x="63.627" y="25.4" drill="1" diameter="1.778" shape="octagon"/>
-<rectangle x1="61.722" y1="29.464" x2="62.357" y2="31.496" layer="21"/>
+<pad name="MOSI" x="66.167" y="27.94" drill="1" diameter="1.778" shape="offset"/>
+<pad name="SCK" x="63.627" y="27.94" drill="1" diameter="1.778" shape="offset" rot="R180"/>
+<pad name="MISO" x="63.627" y="30.48" drill="1" diameter="1.778" shape="offset" rot="R180"/>
+<pad name="5V_ICSP" x="66.167" y="30.48" drill="1" diameter="1.778" shape="offset"/>
+<pad name="GND@3" x="66.167" y="25.4" drill="1" diameter="1.778" shape="offset"/>
+<pad name="RESET_ICSP" x="63.627" y="25.4" drill="1" diameter="1.778" shape="offset" rot="R180"/>
+<rectangle x1="60.071" y1="29.464" x2="60.706" y2="31.496" layer="21"/>
 </package>
 <package name="ARDUINOR3_ICSP_SMT">
 <wire x1="0" y1="-0.381" x2="66.04" y2="-0.381" width="0" layer="51"/>
@@ -1459,8 +1465,8 @@ type 0207, grid 10 mm</description>
 <package name="PC-D5.0MM">
 <circle x="0" y="0" radius="2.5" width="0.127" layer="21"/>
 <circle x="0" y="0" radius="2.6" width="0.127" layer="39"/>
-<pad name="+" x="-1" y="0" drill="0.8" diameter="1.35" shape="square"/>
-<pad name="-" x="1" y="0" drill="0.8" diameter="1.35"/>
+<pad name="+" x="-1.032" y="0" drill="0.8" diameter="1.35" shape="offset" rot="R180"/>
+<pad name="-" x="1" y="0" drill="0.8" diameter="1.35" shape="offset"/>
 <text x="-1.905" y="2.921" size="0.889" layer="25" ratio="11">&gt;NAME</text>
 <text x="-1.524" y="-4.191" size="0.635" layer="27" ratio="10">&gt;VALUE</text>
 <wire x1="-1.397" y1="1.524" x2="-0.762" y2="1.524" width="0.127" layer="21"/>
@@ -1486,8 +1492,8 @@ type 0207, grid 10 mm</description>
 <wire x1="2.54" y1="1.143" x2="2.54" y2="-1.143" width="0.127" layer="21"/>
 <wire x1="2.54" y1="-1.143" x2="-2.54" y2="-1.143" width="0.127" layer="21"/>
 <wire x1="-2.54" y1="-1.143" x2="-2.54" y2="1.143" width="0.127" layer="21"/>
-<pad name="1" x="-1.27" y="0" drill="0.635" diameter="1.143"/>
-<pad name="2" x="1.27" y="0" drill="0.635" diameter="1.143"/>
+<pad name="1" x="-1.27" y="0" drill="0.635" diameter="1.27"/>
+<pad name="2" x="1.27" y="0" drill="0.635" diameter="1.27"/>
 <text x="-1.905" y="1.27" size="0.8128" layer="25" ratio="10">&gt;NAME</text>
 <text x="-1.651" y="-1.651" size="0.4064" layer="27" ratio="10">&gt;VALUE</text>
 <text x="-1.016" y="-0.254" size="0.4064" layer="33" ratio="10">&gt;NAME</text>
@@ -2797,7 +2803,13 @@ rev. 0</text>
 <label x="205.74" y="138.43" size="1.778" layer="95"/>
 <junction x="307.34" y="54.61"/>
 <pinref part="K2" gate="G$1" pin="2"/>
-<wire x1="307.34" y1="45.72" x2="307.34" y2="54.61" width="0.1524" layer="91"/>
+<wire x1="307.34" y1="45.72" x2="307.34" y2="49.53" width="0.1524" layer="91"/>
+<junction x="307.34" y="49.53"/>
+<wire x1="307.34" y1="49.53" x2="307.34" y2="54.61" width="0.1524" layer="91"/>
+<pinref part="J6" gate="G$1" pin="4"/>
+<wire x1="288.29" y1="16.51" x2="300.99" y2="16.51" width="0.1524" layer="91"/>
+<wire x1="300.99" y1="16.51" x2="300.99" y2="49.53" width="0.1524" layer="91"/>
+<wire x1="300.99" y1="49.53" x2="307.34" y2="49.53" width="0.1524" layer="91"/>
 </segment>
 </net>
 <net name="MISO" class="0">
@@ -2848,14 +2860,9 @@ rev. 0</text>
 <wire x1="88.9" y1="87.63" x2="96.52" y2="87.63" width="0.1524" layer="91"/>
 <wire x1="90.17" y1="73.66" x2="90.17" y2="-7.62" width="0.1524" layer="91"/>
 <wire x1="90.17" y1="-7.62" x2="300.99" y2="-7.62" width="0.1524" layer="91"/>
-<pinref part="J6" gate="G$1" pin="4"/>
-<wire x1="300.99" y1="-7.62" x2="300.99" y2="16.51" width="0.1524" layer="91"/>
-<wire x1="300.99" y1="16.51" x2="289.56" y2="16.51" width="0.1524" layer="91"/>
-<wire x1="289.56" y1="16.51" x2="288.29" y2="16.51" width="0.1524" layer="91"/>
-<junction x="289.56" y="16.51"/>
 <pinref part="J6" gate="G$1" pin="3"/>
-<wire x1="288.29" y1="13.97" x2="289.56" y2="13.97" width="0.1524" layer="91"/>
-<wire x1="289.56" y1="13.97" x2="289.56" y2="16.51" width="0.1524" layer="91"/>
+<wire x1="288.29" y1="13.97" x2="300.99" y2="13.97" width="0.1524" layer="91"/>
+<wire x1="300.99" y1="13.97" x2="300.99" y2="-7.62" width="0.1524" layer="91"/>
 </segment>
 </net>
 <net name="N$55" class="0">
