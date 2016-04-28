@@ -6,7 +6,7 @@
 <setting alwaysvectorfont="no"/>
 <setting verticaltext="up"/>
 </settings>
-<grid distance="0.1" unitdist="inch" unit="inch" style="lines" multiple="1" display="no" altdistance="0.01" altunitdist="inch" altunit="inch"/>
+<grid distance="0.05" unitdist="inch" unit="inch" style="lines" multiple="1" display="no" altdistance="0.01" altunitdist="inch" altunit="inch"/>
 <layers>
 <layer number="1" name="Top" color="4" fill="1" visible="no" active="no"/>
 <layer number="2" name="Route2" color="1" fill="3" visible="no" active="no"/>
@@ -1932,6 +1932,82 @@ MMBT5088LT1G - TRANS-11160 (SOT-23, 50 mA 30V)&lt;br&gt;
 </deviceset>
 </devicesets>
 </library>
+<library name="Seeed-OPL-Diode">
+<packages>
+<package name="LED2-2.54-D3.0MM">
+<description>&lt;B&gt;LED&lt;/B&gt;&lt;p&gt;
+3 mm, round</description>
+<wire x1="1.5748" y1="-1.27" x2="1.5748" y2="1.27" width="0.254" layer="51"/>
+<wire x1="-1.524" y1="0" x2="-1.1708" y2="0.9756" width="0.1524" layer="51" curve="-39.80361" cap="flat"/>
+<wire x1="-1.524" y1="0" x2="-1.1391" y2="-1.0125" width="0.1524" layer="51" curve="41.633208" cap="flat"/>
+<wire x1="1.1571" y1="0.9918" x2="1.524" y2="0" width="0.1524" layer="51" curve="-40.601165" cap="flat"/>
+<wire x1="1.1708" y1="-0.9756" x2="1.524" y2="0" width="0.1524" layer="51" curve="39.80361" cap="flat"/>
+<wire x1="0" y1="1.524" x2="1.2401" y2="0.8858" width="0.1524" layer="21" curve="-54.461337" cap="flat"/>
+<wire x1="-1.2192" y1="0.9144" x2="0" y2="1.524" width="0.1524" layer="21" curve="-53.130102" cap="flat"/>
+<wire x1="0" y1="-1.524" x2="1.203" y2="-0.9356" width="0.1524" layer="21" curve="52.126876" cap="flat"/>
+<wire x1="-1.203" y1="-0.9356" x2="0" y2="-1.524" width="0.1524" layer="21" curve="52.126876" cap="flat"/>
+<wire x1="-0.635" y1="0" x2="0" y2="0.635" width="0.1524" layer="51" curve="-90" cap="flat"/>
+<wire x1="-1.016" y1="0" x2="0" y2="1.016" width="0.1524" layer="51" curve="-90" cap="flat"/>
+<wire x1="0" y1="-0.635" x2="0.635" y2="0" width="0.1524" layer="51" curve="90" cap="flat"/>
+<wire x1="0" y1="-1.016" x2="1.016" y2="0" width="0.1524" layer="51" curve="90" cap="flat"/>
+<wire x1="-2.032" y1="0" x2="-1.7891" y2="0.9634" width="0.254" layer="51" curve="-28.301701" cap="flat"/>
+<wire x1="-2.032" y1="0" x2="-1.7306" y2="-1.065" width="0.254" layer="51" curve="31.60822" cap="flat"/>
+<wire x1="1.5748" y1="1.2954" x2="1.5748" y2="0.7874" width="0.254" layer="21"/>
+<wire x1="1.5748" y1="-1.2954" x2="1.5748" y2="-0.8382" width="0.254" layer="21"/>
+<wire x1="1.524" y1="1.27" x2="1.524" y2="-1.27" width="0.127" layer="39" curve="282.680383"/>
+<wire x1="1.524" y1="-1.27" x2="1.524" y2="1.27" width="0.127" layer="39"/>
+<pad name="A" x="-1.27" y="0" drill="0.8128" diameter="1.4224" shape="square"/>
+<pad name="K" x="1.27" y="0" drill="0.8128" diameter="1.4224"/>
+<text x="-1.905" y="2.286" size="0.889" layer="25" ratio="11">&gt;NAME</text>
+<text x="-1.27" y="-3.429" size="0.635" layer="27" ratio="10">&gt;VALUE</text>
+<text x="-0.762" y="-1.27" size="0.508" layer="21" font="vector">+</text>
+<text x="0.381" y="0.762" size="0.508" layer="21" font="vector">-</text>
+<wire x1="1.524" y1="1.27" x2="1.524" y2="-1.27" width="0.127" layer="21" curve="282.680383"/>
+</package>
+</packages>
+<symbols>
+<symbol name="LED-1">
+<wire x1="-1.27" y1="-2.54" x2="-1.27" y2="2.54" width="0.254" layer="94"/>
+<wire x1="-1.27" y1="2.54" x2="-1.143" y2="2.413" width="0.254" layer="94"/>
+<wire x1="-1.143" y1="2.413" x2="-0.508" y2="1.778" width="0.254" layer="94"/>
+<wire x1="-0.508" y1="1.778" x2="1.27" y2="0" width="0.254" layer="94"/>
+<wire x1="1.27" y1="0" x2="-1.27" y2="-2.54" width="0.254" layer="94"/>
+<wire x1="1.27" y1="2.54" x2="1.27" y2="-2.54" width="0.254" layer="94"/>
+<wire x1="-1.143" y1="2.413" x2="0.889" y2="4.445" width="0.254" layer="94"/>
+<wire x1="0.889" y1="4.445" x2="0.127" y2="4.318" width="0.254" layer="94"/>
+<wire x1="0.889" y1="4.445" x2="0.762" y2="3.683" width="0.254" layer="94"/>
+<wire x1="-0.508" y1="1.778" x2="1.524" y2="3.81" width="0.254" layer="94"/>
+<wire x1="1.524" y1="3.81" x2="0.762" y2="3.683" width="0.254" layer="94"/>
+<wire x1="1.524" y1="3.81" x2="1.397" y2="3.048" width="0.254" layer="94"/>
+<text x="-7.62" y="1.27" size="1.27" layer="95" ratio="10">&gt;NAME</text>
+<text x="-5.08" y="-5.08" size="1.27" layer="96" ratio="10">&gt;VALUE</text>
+<pin name="+" x="-3.81" y="0" visible="off" length="short" direction="pas"/>
+<pin name="-" x="3.81" y="0" visible="off" length="short" direction="pas" rot="R180"/>
+</symbol>
+</symbols>
+<devicesets>
+<deviceset name="DIP-LED-RED-RED(2P-D3MM)" prefix="D" uservalue="yes">
+<description>304090041</description>
+<gates>
+<gate name="G$1" symbol="LED-1" x="0" y="0"/>
+</gates>
+<devices>
+<device name="" package="LED2-2.54-D3.0MM">
+<connects>
+<connect gate="G$1" pin="+" pad="A"/>
+<connect gate="G$1" pin="-" pad="K"/>
+</connects>
+<technologies>
+<technology name="">
+<attribute name="MPN" value="SR302DC"/>
+<attribute name="VALUE" value="SR302DC" constant="no"/>
+</technology>
+</technologies>
+</device>
+</devices>
+</deviceset>
+</devicesets>
+</library>
 </libraries>
 <attributes>
 </attributes>
@@ -1983,6 +2059,9 @@ MMBT5088LT1G - TRANS-11160 (SOT-23, 50 mA 30V)&lt;br&gt;
 <part name="J6" library="Seeed-OPL-Connector" deviceset="DIP-BLACK-MALE-HEADER(7P-2.54-90D)" device="" value="7p-2.54-90d"/>
 <part name="P+8" library="supply1" deviceset="VCC" device=""/>
 <part name="GND14" library="supply1" deviceset="GND" device=""/>
+<part name="D9" library="Seeed-OPL-Diode" deviceset="DIP-LED-RED-RED(2P-D3MM)" device="" value="SR302DC"/>
+<part name="R2" library="Seeed-OPL-Resistor" deviceset="DIP-RES-1K-5%-1/4W(PR-D2.3XL6.5MM)" device="" value="150Ω"/>
+<part name="GND10" library="supply1" deviceset="GND" device=""/>
 </parts>
 <sheets>
 <sheet>
@@ -1997,6 +2076,7 @@ MMBT5088LT1G - TRANS-11160 (SOT-23, 50 mA 30V)&lt;br&gt;
 <wire x1="158.75" y1="193.04" x2="158.75" y2="215.9" width="0.1524" layer="97"/>
 <text x="213.36" y="198.12" size="5.08" layer="97" align="bottom-center">Arduino Multishield
 rev. 0</text>
+<text x="95.25" y="135.89" size="1.778" layer="95">D9</text>
 </plain>
 <instances>
 <instance part="J2" gate="G$1" x="210.82" y="83.82"/>
@@ -2039,6 +2119,9 @@ rev. 0</text>
 <instance part="J6" gate="G$1" x="280.67" y="16.51" rot="R180"/>
 <instance part="P+8" gate="VCC" x="290.83" y="8.89" rot="R270"/>
 <instance part="GND14" gate="1" x="290.83" y="19.05" rot="R90"/>
+<instance part="D9" gate="G$1" x="93.98" y="148.59" rot="R90"/>
+<instance part="R2" gate="G$1" x="93.98" y="156.21" rot="R90"/>
+<instance part="GND10" gate="1" x="93.98" y="162.306" rot="R180"/>
 </instances>
 <busses>
 </busses>
@@ -2127,7 +2210,7 @@ rev. 0</text>
 <wire x1="168.91" y1="90.17" x2="157.48" y2="90.17" width="0.1524" layer="91"/>
 </segment>
 </net>
-<net name="N$18" class="0">
+<net name="D9A" class="0">
 <segment>
 <pinref part="J2" gate="G$1" pin="10"/>
 <wire x1="167.64" y1="82.55" x2="199.39" y2="82.55" width="0.1524" layer="91"/>
@@ -2326,7 +2409,7 @@ rev. 0</text>
 <wire x1="187.96" y1="24.13" x2="288.29" y2="24.13" width="0.1524" layer="91"/>
 </segment>
 </net>
-<net name="N$34" class="0">
+<net name="D9B" class="0">
 <segment>
 <pinref part="J2" gate="G$1" pin="23"/>
 <wire x1="224.79" y1="82.55" x2="229.87" y2="82.55" width="0.1524" layer="91"/>
@@ -2342,6 +2425,10 @@ rev. 0</text>
 <wire x1="189.23" y1="63.5" x2="189.23" y2="30.48" width="0.1524" layer="91"/>
 <wire x1="189.23" y1="30.48" x2="288.29" y2="30.48" width="0.1524" layer="91"/>
 <pinref part="J5" gate="G$1" pin="1"/>
+</segment>
+<segment>
+<pinref part="D9" gate="G$1" pin="+"/>
+<wire x1="93.98" y1="144.78" x2="93.98" y2="135.89" width="0.1524" layer="91"/>
 </segment>
 </net>
 <net name="N$35" class="0">
@@ -2528,6 +2615,11 @@ rev. 0</text>
 <pinref part="GND11" gate="1" pin="GND"/>
 <pinref part="K2" gate="G$1" pin="1"/>
 <wire x1="327.66" y1="45.72" x2="328.93" y2="45.72" width="0.1524" layer="91"/>
+</segment>
+<segment>
+<pinref part="R2" gate="G$1" pin="2"/>
+<pinref part="GND10" gate="1" pin="GND"/>
+<wire x1="93.98" y1="159.766" x2="93.98" y2="160.02" width="0.1524" layer="91"/>
 </segment>
 </net>
 <net name="N$45" class="0">
@@ -2897,6 +2989,12 @@ rev. 0</text>
 <segment>
 <pinref part="C1" gate="G$1" pin="-"/>
 <pinref part="Q2" gate="G$1" pin="C"/>
+</segment>
+</net>
+<net name="N$18" class="0">
+<segment>
+<pinref part="D9" gate="G$1" pin="-"/>
+<pinref part="R2" gate="G$1" pin="1"/>
 </segment>
 </net>
 </nets>
