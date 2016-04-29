@@ -890,8 +890,8 @@ This is the through-hole version of this chip.</description>
 <text x="53.975" y="49.53" size="1.016" layer="21" font="vector" rot="R180">4</text>
 <text x="56.515" y="49.53" size="1.016" layer="21" font="vector" rot="R180">3</text>
 <text x="59.055" y="49.53" size="1.016" layer="21" font="vector" rot="R180">2</text>
-<text x="61.595" y="49.53" size="1.016" layer="21" font="vector" rot="R180">1</text>
-<text x="64.135" y="49.53" size="1.016" layer="21" font="vector" rot="R180">0</text>
+<text x="61.976" y="49.53" size="1.016" layer="21" font="vector" rot="R180">TX</text>
+<text x="64.516" y="49.53" size="1.016" layer="21" font="vector" rot="R180">RX</text>
 <text x="31.623" y="52.07" size="1.016" layer="21" font="vector">Digital I/O</text>
 <text x="50.927" y="52.07" size="1.016" layer="21" font="vector">Digital I/O</text>
 <text x="17.399" y="52.07" size="1.016" layer="21" font="vector">SCL</text>
@@ -1465,27 +1465,23 @@ type 0207, grid 10 mm</description>
 <package name="PC-D5.0MM">
 <circle x="0" y="0" radius="2.5" width="0.127" layer="21"/>
 <circle x="0" y="0" radius="2.6" width="0.127" layer="39"/>
-<pad name="+" x="-1.032" y="0" drill="0.8" diameter="1.35" shape="offset" rot="R180"/>
-<pad name="-" x="1" y="0" drill="0.8" diameter="1.35" shape="offset"/>
+<pad name="+" x="-1.032" y="0" drill="0.8" diameter="1.397" rot="R180"/>
+<pad name="-" x="1" y="0" drill="0.8" diameter="1.397" shape="square"/>
 <text x="-1.905" y="2.921" size="0.889" layer="25" ratio="11">&gt;NAME</text>
 <text x="-1.524" y="-4.191" size="0.635" layer="27" ratio="10">&gt;VALUE</text>
-<wire x1="-1.397" y1="1.524" x2="-0.762" y2="1.524" width="0.127" layer="21"/>
-<wire x1="-0.127" y1="1.524" x2="-0.762" y2="1.524" width="0.127" layer="21"/>
-<wire x1="-0.762" y1="1.524" x2="-0.762" y2="2.159" width="0.127" layer="21"/>
-<wire x1="-0.762" y1="1.524" x2="-0.762" y2="0.889" width="0.127" layer="21"/>
 <wire x1="0" y1="2.5" x2="0" y2="1.651" width="0.127" layer="21"/>
 <wire x1="0" y1="1.651" x2="0" y2="1.016" width="0.127" layer="21"/>
 <wire x1="0" y1="1.016" x2="0" y2="0.381" width="0.127" layer="21"/>
 <wire x1="0" y1="0.381" x2="0" y2="-1.524" width="0.127" layer="21"/>
 <wire x1="0" y1="-1.524" x2="0" y2="-2.286" width="0.127" layer="21"/>
 <wire x1="0" y1="-2.286" x2="0" y2="-2.5" width="0.127" layer="21"/>
-<wire x1="0" y1="-2.286" x2="2.086" y2="-1.27" width="0.127" layer="21"/>
-<wire x1="0" y1="-1.524" x2="2.44" y2="-0.381" width="0.127" layer="21"/>
 <wire x1="1.5875" y1="0.635" x2="2.213" y2="0.916" width="0.127" layer="21"/>
 <wire x1="0" y1="0.381" x2="1.959" y2="1.424" width="0.127" layer="21"/>
 <wire x1="0" y1="1.016" x2="1.578" y2="1.8685" width="0.127" layer="21"/>
 <wire x1="0" y1="1.651" x2="0.97" y2="2.2495" width="0.127" layer="21"/>
 <wire x1="1.75" y1="0" x2="2.413" y2="0.381" width="0.127" layer="21"/>
+<text x="-1.524" y="0.635" size="1.905" layer="21" font="vector">+</text>
+<text x="0.381" y="-2.286" size="1.905" layer="21" font="vector">-</text>
 </package>
 <package name="CERAMIC-2.54">
 <wire x1="-2.54" y1="1.143" x2="2.54" y2="1.143" width="0.127" layer="21"/>
@@ -2039,7 +2035,7 @@ MMBT5088LT1G - TRANS-11160 (SOT-23, 50 mA 30V)&lt;br&gt;
 <part name="GND8" library="supply1" deviceset="GND" device=""/>
 <part name="GND11" library="supply1" deviceset="GND" device=""/>
 <part name="K2" library="Seeed-OPL-Button" deviceset="DIP-BUTTON-FRONT-WHITE(2P-3.4X6MM)" device="" value="TS-1101F"/>
-<part name="C1" library="Seeed-OPL-Capacitor" deviceset="DIP-CAP-ALUMINUM-47UF-16V(D5-H9MM)" device="" value="10µF"/>
+<part name="C1" library="Seeed-OPL-Capacitor" deviceset="DIP-CAP-ALUMINUM-47UF-16V(D5-H9MM)" device="" value="10uF"/>
 <part name="GND5" library="supply1" deviceset="GND" device=""/>
 <part name="R1" library="Seeed-OPL-Resistor" deviceset="DIP-RES-1K-5%-1/4W(PR-D2.3XL6.5MM)" device="" value="1K"/>
 <part name="GND6" library="supply1" deviceset="GND" device=""/>

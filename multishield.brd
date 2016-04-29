@@ -564,8 +564,8 @@ IC needs to have legs bent before insertion.</description>
 <text x="53.975" y="49.53" size="1.016" layer="21" font="vector" rot="R180">4</text>
 <text x="56.515" y="49.53" size="1.016" layer="21" font="vector" rot="R180">3</text>
 <text x="59.055" y="49.53" size="1.016" layer="21" font="vector" rot="R180">2</text>
-<text x="61.595" y="49.53" size="1.016" layer="21" font="vector" rot="R180">1</text>
-<text x="64.135" y="49.53" size="1.016" layer="21" font="vector" rot="R180">0</text>
+<text x="61.976" y="49.53" size="1.016" layer="21" font="vector" rot="R180">TX</text>
+<text x="64.516" y="49.53" size="1.016" layer="21" font="vector" rot="R180">RX</text>
 <text x="31.623" y="52.07" size="1.016" layer="21" font="vector">Digital I/O</text>
 <text x="50.927" y="52.07" size="1.016" layer="21" font="vector">Digital I/O</text>
 <text x="17.399" y="52.07" size="1.016" layer="21" font="vector">SCL</text>
@@ -735,27 +735,23 @@ type 0207, grid 10 mm</description>
 <package name="PC-D5.0MM">
 <circle x="0" y="0" radius="2.5" width="0.127" layer="21"/>
 <circle x="0" y="0" radius="2.6" width="0.127" layer="39"/>
-<pad name="+" x="-1.032" y="0" drill="0.8" diameter="1.35" shape="offset" rot="R180"/>
-<pad name="-" x="1" y="0" drill="0.8" diameter="1.35" shape="offset"/>
+<pad name="+" x="-1.032" y="0" drill="0.8" diameter="1.397" rot="R180"/>
+<pad name="-" x="1" y="0" drill="0.8" diameter="1.397" shape="square"/>
 <text x="-1.905" y="2.921" size="0.889" layer="25" ratio="11">&gt;NAME</text>
 <text x="-1.524" y="-4.191" size="0.635" layer="27" ratio="10">&gt;VALUE</text>
-<wire x1="-1.397" y1="1.524" x2="-0.762" y2="1.524" width="0.127" layer="21"/>
-<wire x1="-0.127" y1="1.524" x2="-0.762" y2="1.524" width="0.127" layer="21"/>
-<wire x1="-0.762" y1="1.524" x2="-0.762" y2="2.159" width="0.127" layer="21"/>
-<wire x1="-0.762" y1="1.524" x2="-0.762" y2="0.889" width="0.127" layer="21"/>
 <wire x1="0" y1="2.5" x2="0" y2="1.651" width="0.127" layer="21"/>
 <wire x1="0" y1="1.651" x2="0" y2="1.016" width="0.127" layer="21"/>
 <wire x1="0" y1="1.016" x2="0" y2="0.381" width="0.127" layer="21"/>
 <wire x1="0" y1="0.381" x2="0" y2="-1.524" width="0.127" layer="21"/>
 <wire x1="0" y1="-1.524" x2="0" y2="-2.286" width="0.127" layer="21"/>
 <wire x1="0" y1="-2.286" x2="0" y2="-2.5" width="0.127" layer="21"/>
-<wire x1="0" y1="-2.286" x2="2.086" y2="-1.27" width="0.127" layer="21"/>
-<wire x1="0" y1="-1.524" x2="2.44" y2="-0.381" width="0.127" layer="21"/>
 <wire x1="1.5875" y1="0.635" x2="2.213" y2="0.916" width="0.127" layer="21"/>
 <wire x1="0" y1="0.381" x2="1.959" y2="1.424" width="0.127" layer="21"/>
 <wire x1="0" y1="1.016" x2="1.578" y2="1.8685" width="0.127" layer="21"/>
 <wire x1="0" y1="1.651" x2="0.97" y2="2.2495" width="0.127" layer="21"/>
 <wire x1="1.75" y1="0" x2="2.413" y2="0.381" width="0.127" layer="21"/>
+<text x="-1.524" y="0.635" size="1.905" layer="21" font="vector">+</text>
+<text x="0.381" y="-2.286" size="1.905" layer="21" font="vector">-</text>
 </package>
 <package name="CERAMIC-2.54">
 <wire x1="-2.54" y1="1.143" x2="2.54" y2="1.143" width="0.127" layer="21"/>
@@ -1064,10 +1060,10 @@ design rules under a new name.</description>
 <attribute name="NAME" x="4.953" y="9.271" size="0.889" layer="25" ratio="11" rot="R270"/>
 <attribute name="VALUE" x="6.223" y="10.668" size="0.6096" layer="27" ratio="11" rot="R270"/>
 </element>
-<element name="C1" library="Seeed-OPL-Capacitor" package="PC-D5.0MM" value="10µF" x="36.068" y="8.001" smashed="yes">
+<element name="C1" library="Seeed-OPL-Capacitor" package="PC-D5.0MM" value="10uF" x="36.068" y="8.001" smashed="yes">
 <attribute name="MPN" value="100µF/16V  5X7" x="36.068" y="8.001" size="1.25" layer="27" font="vector" display="off"/>
-<attribute name="NAME" x="38.227" y="5.969" size="0.889" layer="25" ratio="11"/>
-<attribute name="VALUE" x="33.782" y="5.969" size="0.6604" layer="25" ratio="10"/>
+<attribute name="NAME" x="34.527" y="6.169" size="0.889" layer="25" ratio="11"/>
+<attribute name="VALUE" x="31.282" y="8.369" size="0.67" layer="25" ratio="10"/>
 </element>
 <element name="R1" library="Seeed-OPL-Resistor" package="PR-D2.3XL6.5MM" value="1K" x="19.812" y="18.669" smashed="yes" rot="R180">
 <attribute name="MPN" value="FHCFR-1/4W-102J" x="19.812" y="18.669" size="1.25" layer="27" font="vector" rot="R180" display="off"/>
@@ -1082,13 +1078,13 @@ design rules under a new name.</description>
 <element name="C2" library="Seeed-OPL-Capacitor" package="CERAMIC-2.54" value="22pf" x="49.53" y="19.939" smashed="yes">
 <attribute name="MPN" value="CS1-D5Y5V2A104ZSP" x="49.53" y="19.939" size="1.228" layer="27" display="off"/>
 <attribute name="NAME" x="47.625" y="21.209" size="0.8128" layer="25" ratio="10"/>
-<attribute name="VALUE" x="48.895" y="18.923" size="0.508" layer="25" ratio="10"/>
+<attribute name="VALUE" x="49.895" y="21.323" size="0.6" layer="25" ratio="10"/>
 <attribute name="NAME" x="48.514" y="19.685" size="0.4064" layer="33" ratio="10"/>
 </element>
 <element name="C3" library="Seeed-OPL-Capacitor" package="CERAMIC-2.54" value="22pf" x="43.053" y="19.939" smashed="yes">
 <attribute name="MPN" value="CS1-D5Y5V2A104ZSP" x="43.053" y="19.939" size="1.228" layer="27" display="off"/>
 <attribute name="NAME" x="41.148" y="21.209" size="0.8128" layer="25" ratio="10"/>
-<attribute name="VALUE" x="42.291" y="18.923" size="0.508" layer="25" ratio="10"/>
+<attribute name="VALUE" x="43.291" y="21.323" size="0.6" layer="25" ratio="10"/>
 <attribute name="NAME" x="42.037" y="19.685" size="0.4064" layer="33" ratio="10"/>
 </element>
 <element name="Q2" library="SparkFun-DiscreteSemi" package="TO-92-AMMO" value="" x="33.909" y="19.177" smashed="yes" rot="R180">
@@ -1097,14 +1093,14 @@ design rules under a new name.</description>
 </element>
 <element name="C5" library="Seeed-OPL-Capacitor" package="CERAMIC-2.54" value="100nf" x="32.131" y="22.86" smashed="yes">
 <attribute name="MPN" value="CC1-F5SL2A101KSPW" x="32.131" y="22.86" size="1.778" layer="27" display="off"/>
-<attribute name="NAME" x="34.798" y="22.479" size="0.8128" layer="25" ratio="10"/>
-<attribute name="VALUE" x="31.142" y="24.117" size="0.508" layer="25" ratio="10"/>
+<attribute name="NAME" x="30.298" y="24.179" size="0.8128" layer="25" ratio="10"/>
+<attribute name="VALUE" x="32.142" y="24.317" size="0.6" layer="25" ratio="10"/>
 <attribute name="NAME" x="31.115" y="22.606" size="0.4064" layer="33" ratio="10"/>
 </element>
 <element name="C6" library="Seeed-OPL-Capacitor" package="CERAMIC-2.54" value="100nf" x="35.306" y="37.973" smashed="yes">
 <attribute name="MPN" value="CC1-F5SL2A101KSPW" x="35.306" y="37.973" size="1.778" layer="27" display="off"/>
-<attribute name="NAME" x="37.973" y="37.592" size="0.8128" layer="25" ratio="10"/>
-<attribute name="VALUE" x="34.363" y="36.23" size="0.508" layer="25" ratio="10"/>
+<attribute name="NAME" x="33.273" y="35.992" size="0.8128" layer="25" ratio="10"/>
+<attribute name="VALUE" x="35.263" y="36.13" size="0.6" layer="25" ratio="10"/>
 <attribute name="NAME" x="34.29" y="37.719" size="0.4064" layer="33" ratio="10"/>
 </element>
 <element name="U$4" library="adafruit" package="OSHWLOGO_BACK_0.2" value="" x="10.16" y="6.731"/>
@@ -1130,7 +1126,7 @@ design rules under a new name.</description>
 </element>
 <element name="D9" library="Seeed-OPL-Diode" package="LED2-2.54-D3.0MM" value="SR302DC" x="5.596" y="51.689" smashed="yes" rot="R180">
 <attribute name="MPN" value="SR302DC" x="5.596" y="51.689" size="1.778" layer="27" rot="R180" display="off"/>
-<attribute name="NAME" x="2.997" y="53.401" size="0.889" layer="25" ratio="11" rot="R270"/>
+<attribute name="NAME" x="2.997" y="53.301" size="0.889" layer="25" ratio="11" rot="R270"/>
 </element>
 <element name="R2" library="Seeed-OPL-Resistor" package="PR-D2.3XL6.5MM" value="150Ω" x="10.098" y="41.771" smashed="yes" rot="R270">
 <attribute name="MPN" value="FHCFR-1/4W-102J" x="10.098" y="41.771" size="1.778" layer="27" rot="R270" display="off"/>
@@ -1781,17 +1777,17 @@ design rules under a new name.</description>
 <wire x1="35.224" y1="15.444" x2="29.7215" y2="15.444" width="0.4064" layer="16"/>
 <wire x1="29.7215" y1="15.444" x2="29.638" y2="15.5275" width="0.4064" layer="16"/>
 <wire x1="35.224" y1="10.179" x2="35.332" y2="10.287" width="0.4064" layer="16"/>
-<wire x1="35.332" y1="10.287" x2="38.481" y2="10.287" width="0.4064" layer="16"/>
-<wire x1="38.481" y1="10.287" x2="40.005" y2="11.811" width="0.4064" layer="16"/>
-<wire x1="40.005" y1="11.811" x2="40.005" y2="21.463" width="0.4064" layer="16"/>
 <via x="53.975" y="21.971" extent="1-16" drill="0.6" shape="square"/>
 <wire x1="53.975" y1="21.971" x2="53.975" y2="23.241" width="0.4064" layer="1"/>
 <wire x1="53.975" y1="23.241" x2="55.5371" y2="24.8031" width="0.4064" layer="1"/>
 <wire x1="55.5371" y1="24.8031" x2="55.5371" y2="26.9875" width="0.4064" layer="1"/>
 <wire x1="55.5371" y1="26.9875" x2="56.7896" y2="28.24" width="0.4064" layer="1"/>
 <wire x1="56.7896" y1="28.24" x2="56.805" y2="28.24" width="0.4064" layer="1"/>
-<wire x1="40.005" y1="21.463" x2="40.513" y2="21.971" width="0.4064" layer="16"/>
+<wire x1="40" y1="21.458" x2="40.513" y2="21.971" width="0.4064" layer="16"/>
 <wire x1="40.513" y1="21.971" x2="53.975" y2="21.971" width="0.4064" layer="16"/>
+<wire x1="35.332" y1="10.287" x2="37.987" y2="10.287" width="0.4064" layer="16"/>
+<wire x1="37.987" y1="10.287" x2="40" y2="12.3" width="0.4064" layer="16"/>
+<wire x1="40" y1="12.3" x2="40" y2="21.458" width="0.4064" layer="16"/>
 </signal>
 <signal name="N$40">
 <contactref element="U1" pad="4"/>
@@ -1850,10 +1846,10 @@ design rules under a new name.</description>
 <wire x1="11.596" y1="5.168" x2="8.89" y2="7.874" width="0.4064" layer="16"/>
 <wire x1="8.89" y1="7.874" x2="8.89" y2="12.446" width="0.4064" layer="16"/>
 <contactref element="R1" pad="2"/>
-<wire x1="16.938" y1="15.5275" x2="14.605" y2="17.8605" width="0.4064" layer="1"/>
-<wire x1="14.605" y1="17.8605" x2="14.605" y2="18.669" width="0.4064" layer="1"/>
 <wire x1="19.478" y1="12.3525" x2="24.558" y2="7.2725" width="0.4064" layer="1"/>
 <wire x1="19.478" y1="15.5275" x2="19.478" y2="12.3525" width="0.4064" layer="1"/>
+<wire x1="16.938" y1="15.5275" x2="16.938" y2="16.336" width="0.4064" layer="1"/>
+<wire x1="16.938" y1="16.336" x2="14.605" y2="18.669" width="0.4064" layer="1"/>
 </signal>
 <signal name="SCK">
 <contactref element="U1" pad="3"/>
