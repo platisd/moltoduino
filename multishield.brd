@@ -172,7 +172,7 @@
 <text x="54.61" y="15.875" size="1.578" layer="21" font="vector">A1</text>
 <text x="54.61" y="13.335" size="1.578" layer="21" font="vector">A2</text>
 <text x="54.61" y="10.795" size="1.578" layer="21" font="vector">A3</text>
-<text x="55.372" y="8.128" size="1.27" layer="21" font="vector">A4</text>
+<text x="55.472" y="8.228" size="1.1" layer="21" font="vector">A4</text>
 <text x="55.118" y="48.387" size="1.27" layer="21" font="vector">Tx</text>
 <text x="55.118" y="45.974" size="1.27" layer="21" font="vector">Rx</text>
 <text x="55.753" y="43.053" size="1.578" layer="21" font="vector">2</text>
@@ -212,7 +212,7 @@
 <text x="17.526" y="39.878" size="1.397" layer="21" font="vector">13</text>
 <text x="36.395" y="15.367" size="0.95" layer="21" rot="R180" align="bottom-center">Moltoduino
 shield
-rev. 2</text>
+rev. 3</text>
 <text x="34.163" y="17.018" size="0.6096" layer="25" align="bottom-center">BC547</text>
 <polygon width="0.4064" layer="22">
 <vertex x="60.198" y="33.02"/>
@@ -231,7 +231,7 @@ for platis.solutions</text>
 <wire x1="2.794" y1="53.721" x2="53.975" y2="53.721" width="0.4064" layer="20"/>
 <wire x1="53.975" y1="53.721" x2="57.277" y2="50.419" width="0.4064" layer="20"/>
 <wire x1="57.277" y1="3.556" x2="60.325" y2="3.556" width="0.4064" layer="20"/>
-<text x="56.515" y="5.588" size="1.27" layer="21" font="vector" align="bottom-center">A5</text>
+<text x="56.515" y="5.688" size="1.1" layer="21" font="vector" align="bottom-center">A5</text>
 <text x="9.017" y="36.438" size="1.578" layer="21" font="vector">~</text>
 <text x="9.017" y="33.898" size="1.578" layer="21" font="vector">~</text>
 <text x="9.017" y="31.204" size="1.578" layer="21" font="vector">~</text>
@@ -1072,8 +1072,8 @@ design rules under a new name.</description>
 </element>
 <element name="Y1" library="Seeed-OPL-Crystal-Oscillator" package="HC49US" value="16MHZ" x="46.736" y="15.748" smashed="yes">
 <attribute name="MPN" value="49S/18PF" x="46.736" y="15.748" size="1.228" layer="27" display="off"/>
-<attribute name="NAME" x="45.974" y="16.637" size="0.889" layer="25" ratio="11"/>
-<attribute name="VALUE" x="45.085" y="13.843" size="0.889" layer="25" ratio="11"/>
+<attribute name="NAME" x="51.374" y="17.337" size="0.889" layer="25" ratio="11"/>
+<attribute name="VALUE" x="46.685" y="12.443" size="0.889" layer="25" ratio="11"/>
 </element>
 <element name="C2" library="Seeed-OPL-Capacitor" package="CERAMIC-2.54" value="22pf" x="49.53" y="19.939" smashed="yes">
 <attribute name="MPN" value="CS1-D5Y5V2A104ZSP" x="49.53" y="19.939" size="1.228" layer="27" display="off"/>
