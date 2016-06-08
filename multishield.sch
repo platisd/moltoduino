@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE eagle SYSTEM "eagle.dtd">
-<eagle version="7.5.0">
+<eagle version="7.6.0">
 <drawing>
 <settings>
 <setting alwaysvectorfont="no"/>
@@ -1938,10 +1938,8 @@ MMBT5088LT1G - TRANS-11160 (SOT-23, 50 mA 30V)&lt;br&gt;
 <wire x1="-1.524" y1="0" x2="-1.1391" y2="-1.0125" width="0.1524" layer="51" curve="41.633208" cap="flat"/>
 <wire x1="1.1571" y1="0.9918" x2="1.524" y2="0" width="0.1524" layer="51" curve="-40.601165" cap="flat"/>
 <wire x1="1.1708" y1="-0.9756" x2="1.524" y2="0" width="0.1524" layer="51" curve="39.80361" cap="flat"/>
-<wire x1="0" y1="1.524" x2="1.2401" y2="0.8858" width="0.1524" layer="21" curve="-54.461337" cap="flat"/>
 <wire x1="-1.2192" y1="0.9144" x2="0" y2="1.524" width="0.1524" layer="21" curve="-53.130102" cap="flat"/>
 <wire x1="0" y1="-1.524" x2="1.203" y2="-0.9356" width="0.1524" layer="21" curve="52.126876" cap="flat"/>
-<wire x1="-1.203" y1="-0.9356" x2="0" y2="-1.524" width="0.1524" layer="21" curve="52.126876" cap="flat"/>
 <wire x1="-0.635" y1="0" x2="0" y2="0.635" width="0.1524" layer="51" curve="-90" cap="flat"/>
 <wire x1="-1.016" y1="0" x2="0" y2="1.016" width="0.1524" layer="51" curve="-90" cap="flat"/>
 <wire x1="0" y1="-0.635" x2="0.635" y2="0" width="0.1524" layer="51" curve="90" cap="flat"/>
@@ -1956,8 +1954,8 @@ MMBT5088LT1G - TRANS-11160 (SOT-23, 50 mA 30V)&lt;br&gt;
 <pad name="K" x="1.27" y="0" drill="0.8128" diameter="1.4224"/>
 <text x="-1.905" y="2.286" size="0.889" layer="25" ratio="11">&gt;NAME</text>
 <text x="-1.27" y="-3.429" size="0.635" layer="27" ratio="10">&gt;VALUE</text>
-<text x="-0.762" y="-1.27" size="0.508" layer="21" font="vector">+</text>
-<text x="0.381" y="0.762" size="0.508" layer="21" font="vector">-</text>
+<text x="-1.143" y="-1.905" size="1.27" layer="21" font="vector">+</text>
+<text x="0.127" y="0.635" size="1.27" layer="21" font="vector">-</text>
 <wire x1="1.524" y1="1.27" x2="1.524" y2="-1.27" width="0.127" layer="21" curve="282.680383"/>
 </package>
 </packages>
@@ -2055,7 +2053,7 @@ MMBT5088LT1G - TRANS-11160 (SOT-23, 50 mA 30V)&lt;br&gt;
 <part name="J6" library="Seeed-OPL-Connector" deviceset="DIP-BLACK-MALE-HEADER(7P-2.54-90D)" device="" value="7p-2.54-90d"/>
 <part name="P+8" library="supply1" deviceset="VCC" device=""/>
 <part name="GND14" library="supply1" deviceset="GND" device=""/>
-<part name="D9" library="Seeed-OPL-Diode" deviceset="DIP-LED-RED-RED(2P-D3MM)" device="" value="SR302DC"/>
+<part name="13" library="Seeed-OPL-Diode" deviceset="DIP-LED-RED-RED(2P-D3MM)" device="" value="SR302DC"/>
 <part name="R2" library="Seeed-OPL-Resistor" deviceset="DIP-RES-1K-5%-1/4W(PR-D2.3XL6.5MM)" device="" value="150Ω"/>
 <part name="GND10" library="supply1" deviceset="GND" device=""/>
 <part name="R4" library="Seeed-OPL-Resistor" deviceset="DIP-RES-4.7K-5%-1/4W(PR-D2.3XL6.5MM)" device="" value="4.7K"/>
@@ -2073,7 +2071,7 @@ MMBT5088LT1G - TRANS-11160 (SOT-23, 50 mA 30V)&lt;br&gt;
 <wire x1="158.75" y1="193.04" x2="158.75" y2="215.9" width="0.1524" layer="97"/>
 <text x="213.36" y="198.12" size="5.08" layer="97" align="bottom-center">Arduino Multishield
 rev. 0</text>
-<text x="95.25" y="135.89" size="1.778" layer="95">D9</text>
+<text x="95.25" y="135.89" size="1.778" layer="95">D13</text>
 </plain>
 <instances>
 <instance part="J2" gate="G$1" x="210.82" y="83.82"/>
@@ -2116,7 +2114,7 @@ rev. 0</text>
 <instance part="J6" gate="G$1" x="280.67" y="16.51" rot="R180"/>
 <instance part="P+8" gate="VCC" x="290.83" y="8.89" rot="R270"/>
 <instance part="GND14" gate="1" x="290.83" y="19.05" rot="R90"/>
-<instance part="D9" gate="G$1" x="93.98" y="148.59" rot="R90"/>
+<instance part="13" gate="G$1" x="93.98" y="148.59" rot="R90"/>
 <instance part="R2" gate="G$1" x="93.98" y="156.21" rot="R90"/>
 <instance part="GND10" gate="1" x="93.98" y="162.306" rot="R180"/>
 <instance part="R4" gate="G$1" x="207.01" y="151.13" rot="R180"/>
@@ -2423,10 +2421,6 @@ rev. 0</text>
 <wire x1="189.23" y1="63.5" x2="189.23" y2="30.48" width="0.1524" layer="91"/>
 <wire x1="189.23" y1="30.48" x2="288.29" y2="30.48" width="0.1524" layer="91"/>
 <pinref part="J5" gate="G$1" pin="1"/>
-</segment>
-<segment>
-<pinref part="D9" gate="G$1" pin="+"/>
-<wire x1="93.98" y1="144.78" x2="93.98" y2="135.89" width="0.1524" layer="91"/>
 </segment>
 </net>
 <net name="N$35" class="0">
@@ -2841,6 +2835,10 @@ rev. 0</text>
 <wire x1="287.02" y1="40.64" x2="288.29" y2="40.64" width="0.1524" layer="91"/>
 <pinref part="J5" gate="G$1" pin="5"/>
 </segment>
+<segment>
+<pinref part="13" gate="G$1" pin="+"/>
+<wire x1="93.98" y1="144.78" x2="93.98" y2="135.89" width="0.1524" layer="91"/>
+</segment>
 </net>
 <net name="SLAVE-RESET" class="0">
 <segment>
@@ -2958,7 +2956,7 @@ rev. 0</text>
 </net>
 <net name="N$18" class="0">
 <segment>
-<pinref part="D9" gate="G$1" pin="-"/>
+<pinref part="13" gate="G$1" pin="-"/>
 <pinref part="R2" gate="G$1" pin="1"/>
 </segment>
 </net>
