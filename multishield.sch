@@ -1,12 +1,13 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE eagle SYSTEM "eagle.dtd">
-<eagle version="7.6.0">
+<eagle version="8.6.1">
 <drawing>
 <settings>
 <setting alwaysvectorfont="no"/>
+<setting keepoldvectorfont="yes"/>
 <setting verticaltext="up"/>
 </settings>
-<grid distance="0.05" unitdist="inch" unit="inch" style="lines" multiple="1" display="no" altdistance="0.01" altunitdist="inch" altunit="inch"/>
+<grid distance="0.1" unitdist="inch" unit="inch" style="lines" multiple="1" display="no" altdistance="0.01" altunitdist="inch" altunit="inch"/>
 <layers>
 <layer number="1" name="Top" color="4" fill="1" visible="no" active="no"/>
 <layer number="2" name="Route2" color="1" fill="3" visible="no" active="no"/>
@@ -1462,27 +1463,6 @@ type 0207, grid 10 mm</description>
 </library>
 <library name="Seeed-OPL-Capacitor">
 <packages>
-<package name="PC-D5.0MM">
-<circle x="0" y="0" radius="2.5" width="0.127" layer="21"/>
-<circle x="0" y="0" radius="2.6" width="0.127" layer="39"/>
-<pad name="+" x="-1.032" y="0" drill="0.8" diameter="1.397" rot="R180"/>
-<pad name="-" x="1" y="0" drill="0.8" diameter="1.397" shape="square"/>
-<text x="-1.905" y="2.921" size="0.889" layer="25" ratio="11">&gt;NAME</text>
-<text x="-1.524" y="-4.191" size="0.635" layer="27" ratio="10">&gt;VALUE</text>
-<wire x1="0" y1="2.5" x2="0" y2="1.651" width="0.127" layer="21"/>
-<wire x1="0" y1="1.651" x2="0" y2="1.016" width="0.127" layer="21"/>
-<wire x1="0" y1="1.016" x2="0" y2="0.381" width="0.127" layer="21"/>
-<wire x1="0" y1="0.381" x2="0" y2="-1.524" width="0.127" layer="21"/>
-<wire x1="0" y1="-1.524" x2="0" y2="-2.286" width="0.127" layer="21"/>
-<wire x1="0" y1="-2.286" x2="0" y2="-2.5" width="0.127" layer="21"/>
-<wire x1="1.5875" y1="0.635" x2="2.213" y2="0.916" width="0.127" layer="21"/>
-<wire x1="0" y1="0.381" x2="1.959" y2="1.424" width="0.127" layer="21"/>
-<wire x1="0" y1="1.016" x2="1.578" y2="1.8685" width="0.127" layer="21"/>
-<wire x1="0" y1="1.651" x2="0.97" y2="2.2495" width="0.127" layer="21"/>
-<wire x1="1.75" y1="0" x2="2.413" y2="0.381" width="0.127" layer="21"/>
-<text x="-1.524" y="0.635" size="1.905" layer="21" font="vector">+</text>
-<text x="0.381" y="-2.286" size="1.905" layer="21" font="vector">-</text>
-</package>
 <package name="CERAMIC-2.54">
 <wire x1="-2.54" y1="1.143" x2="2.54" y2="1.143" width="0.127" layer="21"/>
 <wire x1="2.54" y1="1.143" x2="2.54" y2="-1.143" width="0.127" layer="21"/>
@@ -1497,17 +1477,6 @@ type 0207, grid 10 mm</description>
 </package>
 </packages>
 <symbols>
-<symbol name="CAP-POLAR">
-<wire x1="-1.27" y1="2.54" x2="-1.27" y2="-2.54" width="0.508" layer="94"/>
-<wire x1="1.27" y1="2.54" x2="1.27" y2="-2.54" width="0.508" layer="94" curve="47.924978"/>
-<wire x1="1.27" y1="0" x2="0.635" y2="0" width="0.1524" layer="94"/>
-<text x="-2.54" y="0" size="1.27" layer="93" ratio="10">+</text>
-<text x="-6.35" y="3.81" size="1.27" layer="95" ratio="10">&gt;NAME</text>
-<text x="1.27" y="3.81" size="1.27" layer="96" ratio="10">&gt;VALUE</text>
-<text x="1.27" y="0" size="1.27" layer="93" ratio="10">-</text>
-<pin name="+" x="-3.81" y="0" visible="off" length="short" direction="pas"/>
-<pin name="-" x="3.81" y="0" visible="off" length="short" direction="pas" rot="R180"/>
-</symbol>
 <symbol name="C">
 <wire x1="-0.635" y1="-1.016" x2="-0.635" y2="0" width="0.254" layer="94"/>
 <wire x1="-0.635" y1="0" x2="-0.635" y2="1.016" width="0.254" layer="94"/>
@@ -1522,26 +1491,6 @@ type 0207, grid 10 mm</description>
 </symbol>
 </symbols>
 <devicesets>
-<deviceset name="DIP-CAP-ALUMINUM-47UF-16V(D5-H9MM)" prefix="C" uservalue="yes">
-<description>302030033</description>
-<gates>
-<gate name="G$1" symbol="CAP-POLAR" x="0" y="0"/>
-</gates>
-<devices>
-<device name="" package="PC-D5.0MM">
-<connects>
-<connect gate="G$1" pin="+" pad="+"/>
-<connect gate="G$1" pin="-" pad="-"/>
-</connects>
-<technologies>
-<technology name="">
-<attribute name="MPN" value="100µF/16V  5X7" constant="no"/>
-<attribute name="VALUE" value="100µF/16V  5X7" constant="no"/>
-</technology>
-</technologies>
-</device>
-</devices>
-</deviceset>
 <deviceset name="DIP-CERAMIC-DISC-22PF-50V-10%-NPO(D4.0MM)" prefix="C" uservalue="yes">
 <description>302010200</description>
 <gates>
@@ -2033,7 +1982,6 @@ MMBT5088LT1G - TRANS-11160 (SOT-23, 50 mA 30V)&lt;br&gt;
 <part name="GND8" library="supply1" deviceset="GND" device=""/>
 <part name="GND11" library="supply1" deviceset="GND" device=""/>
 <part name="K2" library="Seeed-OPL-Button" deviceset="DIP-BUTTON-FRONT-WHITE(2P-3.4X6MM)" device="" value="TS-1101F"/>
-<part name="C1" library="Seeed-OPL-Capacitor" deviceset="DIP-CAP-ALUMINUM-47UF-16V(D5-H9MM)" device="" value="10uF"/>
 <part name="GND5" library="supply1" deviceset="GND" device=""/>
 <part name="R1" library="Seeed-OPL-Resistor" deviceset="DIP-RES-1K-5%-1/4W(PR-D2.3XL6.5MM)" device="" value="1K"/>
 <part name="GND6" library="supply1" deviceset="GND" device=""/>
@@ -2057,6 +2005,7 @@ MMBT5088LT1G - TRANS-11160 (SOT-23, 50 mA 30V)&lt;br&gt;
 <part name="R2" library="Seeed-OPL-Resistor" deviceset="DIP-RES-1K-5%-1/4W(PR-D2.3XL6.5MM)" device="" value="150Ω"/>
 <part name="GND10" library="supply1" deviceset="GND" device=""/>
 <part name="R4" library="Seeed-OPL-Resistor" deviceset="DIP-RES-4.7K-5%-1/4W(PR-D2.3XL6.5MM)" device="" value="4.7K"/>
+<part name="C4" library="Seeed-OPL-Capacitor" deviceset="DIP-CERAMIC-DISC-100NF-50V-Y5V(D5.0MM)" device="" value="100nf"/>
 </parts>
 <sheets>
 <sheet>
@@ -2070,7 +2019,7 @@ MMBT5088LT1G - TRANS-11160 (SOT-23, 50 mA 30V)&lt;br&gt;
 <wire x1="266.7" y1="193.04" x2="158.75" y2="193.04" width="0.1524" layer="97"/>
 <wire x1="158.75" y1="193.04" x2="158.75" y2="215.9" width="0.1524" layer="97"/>
 <text x="213.36" y="198.12" size="5.08" layer="97" align="bottom-center">Arduino Multishield
-rev. 0</text>
+rev. 2.3</text>
 <text x="95.25" y="135.89" size="1.778" layer="95">D13</text>
 </plain>
 <instances>
@@ -2094,7 +2043,6 @@ rev. 0</text>
 <instance part="GND8" gate="1" x="214.63" y="148.59"/>
 <instance part="GND11" gate="1" x="331.47" y="45.72" rot="R90"/>
 <instance part="K2" gate="G$1" x="317.5" y="45.72" rot="R180"/>
-<instance part="C1" gate="G$1" x="166.37" y="172.72"/>
 <instance part="GND5" gate="1" x="191.77" y="185.42" rot="R180"/>
 <instance part="R1" gate="G$1" x="208.28" y="177.8"/>
 <instance part="GND6" gate="1" x="290.83" y="21.59" rot="R90"/>
@@ -2118,6 +2066,7 @@ rev. 0</text>
 <instance part="R2" gate="G$1" x="93.98" y="156.21" rot="R90"/>
 <instance part="GND10" gate="1" x="93.98" y="162.306" rot="R180"/>
 <instance part="R4" gate="G$1" x="207.01" y="151.13" rot="R180"/>
+<instance part="C4" gate="G$1" x="166.37" y="172.72"/>
 </instances>
 <busses>
 </busses>
@@ -2895,8 +2844,8 @@ rev. 0</text>
 <pinref part="M1" gate="G$1" pin="/RESET"/>
 <wire x1="96.52" y1="85.09" x2="66.04" y2="85.09" width="0.1524" layer="91"/>
 <wire x1="66.04" y1="85.09" x2="66.04" y2="172.72" width="0.1524" layer="91"/>
-<pinref part="C1" gate="G$1" pin="+"/>
 <wire x1="66.04" y1="172.72" x2="162.56" y2="172.72" width="0.1524" layer="91"/>
+<pinref part="C4" gate="G$1" pin="1"/>
 </segment>
 </net>
 <net name="N$38" class="0">
@@ -2949,9 +2898,9 @@ rev. 0</text>
 </net>
 <net name="N$36" class="0">
 <segment>
-<pinref part="C1" gate="G$1" pin="-"/>
 <pinref part="Q2" gate="G$1" pin="C"/>
 <wire x1="170.18" y1="172.72" x2="191.77" y2="172.72" width="0.1524" layer="91"/>
+<pinref part="C4" gate="G$1" pin="2"/>
 </segment>
 </net>
 <net name="N$18" class="0">
