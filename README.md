@@ -20,7 +20,7 @@ Moltoduino is essentially a barebones Arduino UNO in the form of a shield that c
 * Save physical space needed for applications that require a more than one microcontrollers (e.g. by stacking them instead placing them next to each other)
 
 ## How?
-Moltoduino was initially created with the purpose of providing a stackable pin extension solution for Arduino boards. During development, another use case emerged which involved the shield being used for HIL testing. Do not forget to check out the relevant [code examples](#code-examples).
+Moltoduino was initially created with the purpose of providing a stackable pin extension solution for Arduino boards. During development, another use case emerged which involved the shield being used for HIL testing.
 
 The picture below illustrates how the pins of the shield's ATMega328P are broken out, highlighting them with **green**. In **red** one can find the bottom Arduino's pins. It becomes apparent that pins that follow the Arduino numbering convention can be easily connected via jumpers (e.g. D1 with D1) regardless of which specific Arduino board is in place (i.e. Mega or Uno). Furthermore, the shield's pins are also broken on the sides of the board so to be accessible when multiple Moltoduinos or other shields are stacked on top.
 
@@ -34,7 +34,7 @@ The pins facing outward can interface with the external components while the inw
 ### HIL testing
 Moltoduino can be utilized to provide a _hobby-grade_ [HIL testing](http://www.hil-simulation.com/home/hil-testing.html) solution for your embedded project. Having two microcontrollers that are easily connected to each other it is possible to conduct HIL simulations. This is achieved by one microcontroller running the production code and the other running the HIL test which generates input for the system under test and reads its output.
 
-Having a HIL test fixture allows you to automate system-level testing on your project. This can be a difficult and laborious process, where the tester would have to manually provide the environment input and check the output so to verify the system.
+Such a HIL test fixture allows you to automate system-level testing on your project. This can be a difficult and laborious process, where the tester would have to manually provide the environment input and check the output so to verify the system. Check out the relevant [code examples](#code-examples) to see how a HIL implementation could look like.
 
 ### Programming Moltoduino
 1. Have all switches (there is one on each Moltoduino), in the "operation" position instead of "programming" mode
