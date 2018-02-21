@@ -20,7 +20,7 @@ Moltoduino is essentially a barebones Arduino UNO in the form of a shield that c
 * Save physical space needed for applications that require a more than one microcontrollers (e.g. by stacking them instead placing them next to each other)
 
 ## How?
-Moltoduino was initially created with the purpose of providing a stackable pin extension solution for Arduino boards. During development, another use case emerged which involved the shield being used for HIL testing.
+Moltoduino was initially created with the purpose of providing a stackable pin extension solution for Arduino boards. During development, another use case emerged which involved the shield being used for HIL testing. Do not forget to check out the relevant [code examples](#code-examples).
 
 The picture below illustrates how the pins of the shield's ATMega328P are broken out, highlighting them with **green**. In **red** one can find the bottom Arduino's pins. It becomes apparent that pins that follow the Arduino numbering convention can be easily connected via jumpers (e.g. D1 with D1) regardless of which specific Arduino board is in place (i.e. Mega or Uno). Furthermore, the shield's pins are also broken on the sides of the board so to be accessible when multiple Moltoduinos or other shields are stacked on top.
 
@@ -64,45 +64,45 @@ const int SERVO_PIN = 3;
 const int FORWARD_PIN = 8;
 const int BACKWARD_PIN = 7;
 const int THROTTLE_PIN = 6;
-const int fSpeed = 70; //70% of the full speed forward
-const int bSpeed = -70; //70% of the full speed backward
-const int lDegrees = -50; //degrees to turn left
-const int rDegrees = 50; //degrees to turn right
+const int fSpeed = 70; // 70% of the full speed forward
+const int bSpeed = -70; // 70% of the full speed backward
+const int lDegrees = -50; // Degrees to turn left
+const int rDegrees = 50; // Degrees to turn right
 
-//initialize the car, that uses a servo motor for steering
-//and a brushed DC motor to pins 8,7 (direction) and 6 (PWM) for throttling
+// Initialize the car, that uses a servo motor for steering
+// and a brushed DC motor to pins 8,7 (direction) and 6 (PWM) for throttling
 Car car(useServo(SERVO_PIN), useDCMotor(FORWARD_PIN, BACKWARD_PIN, THROTTLE_PIN));
 
 void setup() {
   Serial.begin(9600);
-  car.begin(); //initialize the car using the encoders and the gyro
+  car.begin(); // Initialize the car using the encoders and the gyro
 }
 
 void loop() {
   handleInput();
 }
 
-void handleInput() { //handle serial input if there is any
+void handleInput() { // Handle serial input if there is any
   if (Serial.available()) {
     char input = Serial.read();
     switch (input) {
-      case 'l': //turn counter-clockwise going forward
+      case 'l': // Turn counter-clockwise going forward
         car.setSpeed(fSpeed);
         car.setAngle(lDegrees);
         break;
-      case 'r': //turn clock-wise
+      case 'r': // Turn clock-wise
         car.setSpeed(fSpeed);
         car.setAngle(rDegrees);
         break;
-      case 'f': //go ahead
+      case 'f': // Go ahead
         car.setSpeed(fSpeed);
         car.setAngle(0);
         break;
-      case 'b': //go back
+      case 'b': // Go back
         car.setSpeed(bSpeed);
         car.setAngle(0);
         break;
-      default: //if you receive something that you don't know, just stop
+      default: // If you receive something that you don't know, just stop
         car.setSpeed(0);
         car.setAngle(0);
     }
@@ -234,6 +234,134 @@ void setup() {
   turnLeft_test();
   turnRight_test();
   stop_test();
+}
+
+void loop() {
+}
+```
+
+### Controlling a light based on ultrasound sensor distance measurements
+In this scenario, an `HC-SR04` ultrasound sensor is being used to measure distances. When an object is detected close enough a light turns on. Yet again, the HIL simulation will be running on an Arduino Mega while the system under test firmware will be uploaded onto a Moltoduino that is stacked on top.
+
+**System under test**
+
+Below you can find a simplified implementation of the typical use case in which a light needs to be turned on when an object is detected at a nearby distance otherwise it should be off. The `HC-SR04` class of [Smartcar shield](http://plat.is/smartcar) library is utilized to conduct the measurements.
+
+```cpp
+#include <Smartcar.h>
+
+SR04 sensor;
+const int TRIGGER_PIN = 2;
+const int ECHO_PIN = 3;
+const int LIGHT_PIN = 9;
+const int MIN_OBSTACLE_DISTANCE = 15; // In centimeters
+
+void setup() {
+  sensor.attach(TRIGGER_PIN, ECHO_PIN);
+  pinMode(LIGHT_PIN, OUTPUT);
+}
+
+void loop() {
+  auto distance = sensor.getDistance();
+  // If there is an obstacle nearby turn the light on
+  if (distance > 0 && distance < MIN_OBSTACLE_DISTANCE) {
+    digitalWrite(LIGHT_PIN, HIGH);
+  } else {
+    digitalWrite(LIGHT_PIN, LOW);
+  }
+  delay(100);
+}
+```
+
+**HIL simulation**
+
+In this HIL test we need to simulate the `HC-SR04` ultrasound sensor's input to the system and then observe its output (i.e. the pin that controls the state of the light). Particularly, we observe (via an interrupt) the incoming signals from the trigger pin of the system under test, an event which designates that a measurement has been initiated. Next, we simulate the sensor input by calculating and producing a pulse of equal length to the one that would have been generated, should there have been an actual sensor and an object. Finally, we verify the digital pin that controls the light is in the appropriate state.
+
+Jumpers are used to enable interaction between the system under test and the HIL simulation. The jumper placement is illustrated in the table below.
+
+| HIL simulation | System Under Test | Purpose              |
+| :----:         |:----:             |:----:                |
+| 2              |  2                | Read trigger signal  |
+| 3              |  3                | Generate echo pulse  |
+| 9              |  9                | Read light pin state |
+
+```cpp
+const int TRIGGER_PIN = 2;
+const int ECHO_PIN = 3;
+const int LIGHT_PIN = 9;
+
+volatile unsigned long echoDuration = 0;
+
+void generateEcho() {
+  if (echoDuration == 0) {
+    // If no echo duration has been set or set to 0
+    // then return immediately as no pulse is to be generated
+    return;
+  }
+  digitalWrite(ECHO_PIN, LOW); // Set LOW first for cleaner signal
+  delayMicroseconds(3);
+  // Simulate the echo pulse of an HC-SR04 sensor
+  digitalWrite(ECHO_PIN, HIGH);
+  delayMicroseconds(echoDuration);
+  digitalWrite(ECHO_PIN, LOW);
+}
+
+/**
+   Accordig to the HC-SR04 datasheet (https://goo.gl/b22dp3) the formula to
+   determine the distance in centimeters is: cm = uSec / 58
+   We need to calculate the length of the pulse in microseconds
+   that we has to be generated to simulate a specific distance in cm.
+*/
+void setEchoPulseDurationFor(unsigned int cm) {
+  noInterrupts();
+  echoDuration = cm * 58;
+  interrupts();
+}
+
+void runUltrasoundHIL(const char* testName, int obstacleDistance, int expectedLEDState) {
+  Serial.print("RUNNING: ");
+  Serial.println(testName);
+  setEchoPulseDurationFor(obstacleDistance);
+  const unsigned long TEST_DELAY = 300;
+  delay(TEST_DELAY); // Wait a bit for a new measurement to start
+  String result = digitalRead(LIGHT_PIN) == expectedLEDState ? "PASSED" : "FAILED";
+  Serial.print("\nRESULT: ");
+  Serial.println(result);
+  Serial.println("----");
+}
+
+void whenObstacleNear_lightTurnsOn_test() {
+  auto obstacleDistance = 10;
+  auto expectedLEDState = HIGH;
+  runUltrasoundHIL(__func__, obstacleDistance, expectedLEDState);
+}
+
+void whenObstacleFar_lightTurnsOff_test() {
+  auto obstacleDistance = 15;
+  auto expectedLEDState = LOW;
+  runUltrasoundHIL(__func__, obstacleDistance, expectedLEDState);
+}
+
+void whenNoObstacle_lightTurnsOff_test() {
+  auto obstacleDistance = 0;
+  auto expectedLEDState = LOW;
+  runUltrasoundHIL(__func__, obstacleDistance, expectedLEDState);
+}
+
+void setup() {
+  pinMode(LIGHT_PIN, INPUT);
+  pinMode(TRIGGER_PIN, INPUT);
+  pinMode(ECHO_PIN, OUTPUT);
+  // Setup interrupt for trigger pin which goes HIGH when a measurement begins
+  attachInterrupt(digitalPinToInterrupt(TRIGGER_PIN), generateEcho, FALLING);
+  Serial.begin(9600);
+  Serial.println("====================");
+  Serial.println("Starting HIL test suite");
+  Serial.println("====================");
+
+  whenObstacleNear_lightTurnsOn_test();
+  whenObstacleFar_lightTurnsOff_test();
+  whenNoObstacle_lightTurnsOff_test();
 }
 
 void loop() {
