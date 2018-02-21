@@ -241,24 +241,24 @@ void loop() {
 ```
 
 ## Bill Of Materials
-| Quantity | Value             | Device                                    | Package                   | SKU       |
-|----------|-------------------|-------------------------------------------|---------------------------|-----------|
-| 1        | BC547             | TRANSISTOR_NPNBC547                       | TO-92-AMMO                | 305010028 |
-| 1        | 100µF/16V  5X7    | DIP-CAP-ALUMINUM-47UF-16V(D5-H9MM)        | PC-D5.0MM                 | 302030033 |
-| 1        | 16MHZ             | DIP-CRYSTAL-16MHZ-18PF-30PPM-50R(HC49US)  | HC49US                    | 306010037 |
-| 1        | 1K                | DIP-RES-1K-5%-1/4W(PR-D2.3XL6.5MM)        | PR-D2.3XL6.5MM            | 301020000 |
-| 2        | 22pf              | DIP-CERAMIC-DISC-22PF-50V-10%-NPO(D4.0MM) | CERAMIC-2.54              | 302010200 |
-| 1        | 2x16p-2.54        | DIP-BLACK-MALE-HEADER-VERT(2X16P-2.54)    | H2X16-2.54                | 320020049 |
-| 1        | 2x6p-2.54         | DIP-BLACK-MALE-HEADER(2X6P-2.54)          | H2X6-2.54                 | 320020001 |
-| 1        | 3P-2.54-90D       | DIP-BLACK-FEMALE-HEADER(3P-2.54-90D)      | H3-2.54-90D-FEMALE        | 320030100 |
-| 1        | 4.7K              | DIP-RES-4.7K-5%-1/4W(PR-D2.3XL6.5MM)      | PR-D2.3XL6.5MM            | 301020012 |
-| 3        | 8p-2.54-90d       | DIP-BLACK-FEMALE-HEADER-R/A(8P-2.54-90D)  | H8-2.54-90D-FEMALE        | 320030076 |
-| 1        | 74HC4066          | 74HC4066(DIP14)                           | DIP14-2.54-17.24X6.35MM   |           |
-| 1        | Moltoduino shield | MOLTODUINO_SHIELD_PCB                     | ARDUINOR3_ICSP            |           |
-| 1        | ATMEGA328P_PDIP   | ATMEGA328P_PDIP                           | DIL28-3                   | 310010051 |
-| 1        | SK-12D01          | DIP-TOGGLE-SWITCH-ON-ON(3+2P-8.8X4.6MM)   | SW5-2.0-8.8X4.4X4.7MM-90D | 311030008 |
-| 1        | TS-1101F          | DIP-BUTTON-FRONT-WHITE(2P-3.4X6MM)        | SW2-3.4X6.0X3.55MM-90D    | 311020025 |
-| 1        | 10p-2.54          | F185-1110A1BSYA1                          | H10-2.54                  | 320030039 |
-| 1        | 6p-2.54           | F185-1106A1BSYA2                          | H6-2.54                   | 320030012 |
-| 2        | 8p-2.54           | F185-2108A1BSYA1                          | H8-2.54                   | 320030013 |
-| 1        | F185-1206A0ASYC1  | F185-1206A0ASYC1                          | H2X3-2.54                 | 320030052 |
+| Quantity | Value             | Device                                    | Package                   |
+|----------|-------------------|-------------------------------------------|---------------------------|
+| 1        | Moltoduino shield | MOLTODUINO_SHIELD_PCB                     | ARDUINOR3_ICSP            |
+| 1        | ATMEGA328P_PDIP   | ATMEGA328P_PDIP                           | DIL28-3                   |
+| 1        | BC547             | TRANSISTOR_NPNBC547                       | TO-92-AMMO                |
+| 1        | 100µF/16V  5X7    | DIP-CAP-ALUMINUM-47UF-16V(D5-H9MM)        | PC-D5.0MM                 |
+| 1        | 16MHZ             | DIP-CRYSTAL-16MHZ-18PF-30PPM-50R(HC49US)  | HC49US                    |
+| 1        | 1K                | DIP-RES-1K-5%-1/4W(PR-D2.3XL6.5MM)        | PR-D2.3XL6.5MM            |
+| 2        | 22pf              | DIP-CERAMIC-DISC-22PF-50V-10%-NPO(D4.0MM) | CERAMIC-2.54              |
+| 1        | 2x16p-2.54        | DIP-BLACK-MALE-HEADER-VERT(2X16P-2.54)    | H2X16-2.54                |
+| 1        | 2x6p-2.54         | DIP-BLACK-MALE-HEADER(2X6P-2.54)          | H2X6-2.54                 |
+| 1        | 3P-2.54-90D       | DIP-BLACK-FEMALE-HEADER(3P-2.54-90D)      | H3-2.54-90D-FEMALE        |
+| 1        | 4.7K              | DIP-RES-4.7K-5%-1/4W(PR-D2.3XL6.5MM)      | PR-D2.3XL6.5MM            |
+| 3        | 8p-2.54-90d       | DIP-BLACK-FEMALE-HEADER-R/A(8P-2.54-90D)  | H8-2.54-90D-FEMALE        |
+| 1        | 74HC4066          | 74HC4066(DIP14)                           | DIP14-2.54-17.24X6.35MM   |
+| 1        | SK-12D01          | DIP-TOGGLE-SWITCH-ON-ON(3+2P-8.8X4.6MM)   | SW5-2.0-8.8X4.4X4.7MM-90D |
+| 1        | TS-1101F          | DIP-BUTTON-FRONT-WHITE(2P-3.4X6MM)        | SW2-3.4X6.0X3.55MM-90D    |
+| 1        | 10p-2.54          | F185-1110A1BSYA1                          | H10-2.54                  |
+| 1        | 6p-2.54           | F185-1106A1BSYA2                          | H6-2.54                   |
+| 2        | 8p-2.54           | F185-2108A1BSYA1                          | H8-2.54                   |
+| 1        | F185-1206A0ASYC1  | F185-1206A0ASYC1                          | H2X3-2.54                 |
