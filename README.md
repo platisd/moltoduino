@@ -34,7 +34,7 @@ The pins facing outward can interface with the external components while the inw
 ### HIL testing
 Moltoduino can be utilized to provide a _hobby-grade_ [HIL testing](http://www.hil-simulation.com/home/hil-testing.html) solution for your embedded project. Having two microcontrollers that are easily connected to each other it is possible to conduct HIL simulations. This is achieved by one microcontroller running the production code and the other running the HIL test which generates input for the system under test and reads its output.
 
-Such a HIL test fixture allows you to automate system-level testing on your project. This can be a difficult and laborious process, where the tester would have to manually provide the environment input and check the output so to verify the system. Check out the relevant [code examples](#code-examples) to see how a HIL implementation could look like.
+Such a HIL test fixture allows you to automate system-level testing on your project by mimicking real-world input. This can be a difficult and laborious process, where the tester would have to manually provide the environment input and check the output so to verify the system. Check out the relevant [code examples](#code-examples) to see how a HIL implementation could look like.
 
 ### Programming Moltoduino
 1. Have all switches (there is one on each Moltoduino), in the "operation" position instead of "programming" mode
