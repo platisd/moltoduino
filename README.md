@@ -1,7 +1,7 @@
 # Moltoduino
 Add programmable cores to your project and enable Hardware In the Loop (HIL) testing.
 
-![Stacked Moltoduinos](https://i.imgur.com/IfSTcNG.jpg)
+![Stacked Moltoduinos](https://i.imgur.com/Wbx2Yex.jpg)
 
 ## What?
 Moltoduino is an Arduino shield that enables the stacking of multiple ATMega328P microcontrollers. The microcontroller pins are broken out in two ways:
@@ -24,7 +24,7 @@ Moltoduino was initially created with the purpose of providing a stackable pin e
 
 The picture below illustrates how the pins of the shield's ATMega328P are broken out, highlighting them with **green**. In **red** one can find the bottom Arduino's pins. It becomes apparent that pins that follow the Arduino numbering convention can be easily connected via jumpers (e.g. D1 with D1) regardless of which specific Arduino board is in place (i.e. Mega or Uno). Furthermore, the shield's pins are also broken on the sides of the board so to be accessible when multiple Moltoduinos or other shields are stacked on top.
 
-![Moltoduino pin grouping](https://i.imgur.com/vwzHevR.jpg)
+![Moltoduino pin grouping](https://i.imgur.com/xR7Q34B.jpg)
 
 ### Pin extension
 Attaching a Moltoduino shield is more or less equivalent to placing an Arduino Uno on top of another Uno or Mega board. The cool part is that it doesn't take up any horizontal real estate. You program them to perform an individual task in parallel or connect the Arduinos together via Serial, I2C or otherwise to implement complex functionality.
