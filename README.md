@@ -380,9 +380,8 @@ void loop() {
 | 2        | 22pf              | DIP-CERAMIC-DISC-22PF-50V-10%-NPO(D4.0MM) | CERAMIC-2.54              |
 | 1        | 2x16p-2.54        | DIP-BLACK-MALE-HEADER-VERT(2X16P-2.54)    | H2X16-2.54                |
 | 1        | 2x6p-2.54         | DIP-BLACK-MALE-HEADER(2X6P-2.54)          | H2X6-2.54                 |
-| 1        | 3P-2.54-90D       | DIP-BLACK-FEMALE-HEADER(3P-2.54-90D)      | H3-2.54-90D-FEMALE        |
 | 1        | 4.7K              | DIP-RES-4.7K-5%-1/4W(PR-D2.3XL6.5MM)      | PR-D2.3XL6.5MM            |
-| 3        | 8p-2.54-90d       | DIP-BLACK-FEMALE-HEADER-R/A(8P-2.54-90D)  | H8-2.54-90D-FEMALE        |
+| 4        | 8p-2.54-90d       | DIP-BLACK-FEMALE-HEADER-R/A(8P-2.54-90D)  | H8-2.54-90D-FEMALE        |
 | 1        | 74HC4066          | 74HC4066(DIP14)                           | DIP14-2.54-17.24X6.35MM   |
 | 1        | SK-12D01          | DIP-TOGGLE-SWITCH-ON-ON(3+2P-8.8X4.6MM)   | SW5-2.0-8.8X4.4X4.7MM-90D |
 | 1        | TS-1101F          | DIP-BUTTON-FRONT-WHITE(2P-3.4X6MM)        | SW2-3.4X6.0X3.55MM-90D    |
