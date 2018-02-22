@@ -8,7 +8,7 @@ Moltoduino is an Arduino shield that enables the stacking of multiple ATMega328P
 * Outwards, to enable their arbitrary connection to different components or other pins via cables.
 * Inwards, to enable their connection to the respective pin of the bottommost Arduino via jumpers.
 
-The firmware on the Moltoduino cores can be easily flashed by flipping a switch that sets them in programming mode and then using the bottommost Arduino as an ISP programmer.
+The firmware on the Moltoduino cores can be easily flashed by flipping a switch that sets them in programming mode and then using the bottommost Arduino as an ISP programmer. You can read more about the project on [platis.solutions](https://platis.solutions/blog/2018/02/22/moltoduino-extra-cores-hil-testing/).
 
 ## Why?
 Moltoduino is essentially a barebones Arduino UNO in the form of a shield that can be easily reprogrammed. So, what can you do with it?
