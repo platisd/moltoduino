@@ -157,7 +157,7 @@ bool isThrottle(Throttle expectedThrottle) {
 
 bool isSteering(int expectedAngle) {
   int pwm = pulseIn(STEERING_PIN, HIGH);
-  // Map the pwm singal to a 0 to 180 scale
+  // Map the pwm signal to a 0 to 180 scale
   int measuredAngle = map(pwm, 540, 2390, 0, 180);
   // Offset the angle by 90 to get an angle between -90 and 90
   measuredAngle -= 90;
@@ -185,35 +185,35 @@ void runSmartcarHIL(const char* testName, const char command, Throttle throttle,
   Serial.println("----");
 }
 
-bool goForward_test() {
+void goForward_test() {
   auto UARTcommand = CAR_FORWARD;
   auto expectedThrottle = FORWARD;
   auto expectedSteering = STRAIGHT;
   runSmartcarHIL(__func__, UARTcommand, expectedThrottle, expectedSteering);
 }
 
-bool goBackward_test() {
+void goBackward_test() {
   auto UARTcommand = CAR_BACKWARD;
   auto expectedThrottle = BACKWARD;
   auto expectedSteering = STRAIGHT;
   runSmartcarHIL(__func__, UARTcommand, expectedThrottle, expectedSteering);
 }
 
-bool turnLeft_test() {
+void turnLeft_test() {
   auto UARTcommand = CAR_LEFT;
   auto expectedThrottle = FORWARD;
   auto expectedSteering = LEFT;
   runSmartcarHIL(__func__, UARTcommand, expectedThrottle, expectedSteering);
 }
 
-bool turnRight_test() {
+void turnRight_test() {
   auto UARTcommand = CAR_RIGHT;
   auto expectedThrottle = FORWARD;
   auto expectedSteering = RIGHT;
   runSmartcarHIL(__func__, UARTcommand, expectedThrottle, expectedSteering);
 }
 
-bool stop_test() {
+void stop_test() {
   auto UARTcommand = CAR_STOP;
   auto expectedThrottle = STOPPED;
   auto expectedSteering = STRAIGHT;
