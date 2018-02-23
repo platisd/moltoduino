@@ -157,8 +157,10 @@ bool isThrottle(Throttle expectedThrottle) {
 
 bool isSteering(int expectedAngle) {
   int pwm = pulseIn(STEERING_PIN, HIGH);
-  // Map the pwm signal to a 0 to 180 scale
-  int measuredAngle = map(pwm, 540, 2390, 0, 180);
+  // Map the PWM signal to a 0 to 180 scale
+  const int MIN_PWM = 540;
+  const int MAX_PWM = 2390;
+  int measuredAngle = map(pwm, MIN_PWM, MAX_PWM, 0, 180);
   // Offset the angle by 90 to get an angle between -90 and 90
   measuredAngle -= 90;
   int absoluteDelta = expectedAngle > measuredAngle ?
