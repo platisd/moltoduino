@@ -38,13 +38,13 @@ Such a HIL test fixture allows you to automate system-level testing on your proj
 
 ### Programming Moltoduino
 1. Have all switches (there is one on each Moltoduino), in the "operation" position instead of "programming" mode
-2. In the Arduino IDE, upload the ArduinoISP sketch to the "bottom" Arduino
+2. In the Arduino IDE, upload the **ArduinoISP** sketch to the "bottom" Arduino
 3. Open the sketch to upload to the Nth Moltoduino on the Arduino IDE
-4. Make sure that "Arduino as ISP" is chosen under Tools :arrow_right: Programmer
-5. Choose the Arduino Uno as the target board, under Tools :arrow_right: Board :arrow_right: Arduino/Genuino UNO
+4. Make sure that "Arduino as ISP" is chosen under **Tools** :arrow_right: **Programmer**
+5. Choose the Arduino Uno as the target board, under **Tools** :arrow_right: **Board** :arrow_right: **Arduino/Genuino UNO**
 6. Put the switch in the "programming" position, on the Moltoduino(s) you wish to program
-7. (If not previously done) Burn the bootloader, under Tools :arrow_right: Burn bootloader
-8. Upload sketch using programmer, under Sketch :arrow_right: Upload sketch using programmer
+7. (If not previously done) Burn the bootloader, under **Tools** :arrow_right: **Burn bootloader**
+8. Upload sketch using programmer, under **Sketch** :arrow_right: **Upload sketch using programmer**
 9. Put the switch back in the "operation" position, otherwise uploading to the bottom Arduino will not be possible
 
 ## Code examples
